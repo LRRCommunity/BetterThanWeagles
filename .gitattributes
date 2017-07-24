@@ -1,0 +1,16 @@
+# Anything not mentioned explicitly
+* text=auto
+
+# Gradle
+build.gradle              text
+gradle.properties         text
+gradlew                   text
+gradlew.bat               text
+gradle-wrapper.properties text
+gradle-wrapper.jar        binary
+
+# Metainfo files
+mcmod.info text
+
+# Source files
+*.java text
