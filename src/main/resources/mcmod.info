@@ -1,0 +1,14 @@
+[{
+    "modid": "btweagles",
+    "name": "Better Than Weagles",
+    "description": "LoadingReadyRun joke mod for Minecraft",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/DarkMorford/lrrmod",
+    "updateJSON": "",
+    "authorList": ["DarkMorford"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+}]
