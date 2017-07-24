@@ -24,3 +24,7 @@ hs_err_pid*
 # Gradle artifacts
 .gradle/
 build/
+
+# IDEA project files
+.idea/
+*.iml
