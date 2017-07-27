@@ -28,3 +28,7 @@ build/
 # IDEA project files
 .idea/
 *.iml
+
+# Other miscellaneous
+out/
+run/

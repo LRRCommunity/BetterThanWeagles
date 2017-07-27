@@ -1,5 +1,8 @@
 package net.darkmorford.btweagles;
 
+import net.darkmorford.btweagles.item.ModItems;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -22,6 +25,15 @@ public class BetterThanWeagles
 	public static BetterThanWeagles instance;
 
 	public static Logger logger;
+
+	public static final CreativeTabs tabBTWeagles = new CreativeTabs("btweagles")
+	{
+		@Override
+		public ItemStack getTabIconItem()
+		{
+			return new ItemStack(ModItems.butter);
+		}
+	};
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

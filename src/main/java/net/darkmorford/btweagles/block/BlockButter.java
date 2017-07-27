@@ -3,6 +3,7 @@ package net.darkmorford.btweagles.block;
 import net.darkmorford.btweagles.BetterThanWeagles;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockButter extends Block
 {
@@ -12,5 +13,6 @@ public class BlockButter extends Block
 
 		setRegistryName(BetterThanWeagles.MODID, "butter");
 		setUnlocalizedName("butter");
+		setCreativeTab(BetterThanWeagles.tabBTWeagles);
 	}
 }
