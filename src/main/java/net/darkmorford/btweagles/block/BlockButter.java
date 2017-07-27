@@ -16,6 +16,8 @@ public class BlockButter extends Block
 	{
 		super(Material.CLAY);
 
+		this.slipperiness = 0.98F;
+
 		setRegistryName(BetterThanWeagles.MODID, "butter");
 		setUnlocalizedName("butter");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
