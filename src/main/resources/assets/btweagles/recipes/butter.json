@@ -1,0 +1,16 @@
+{
+	"result": {
+		"item": "btweagles:butter",
+	  	"count": 4
+	},
+	"pattern": [
+		"mm",
+		"mm"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"m": {
+			"item": "minecraft:milk_bucket"
+		}
+	}
+}
