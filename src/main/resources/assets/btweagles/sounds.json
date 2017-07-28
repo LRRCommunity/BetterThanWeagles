@@ -1,0 +1,20 @@
+{
+	"rap_music": {
+		"category": "record",
+		"sounds": [
+			{
+				"name": "btweagles:music/twenty-thirteen",
+				"stream": true
+			}
+		]
+	},
+	"bus_music": {
+		"category": "record",
+		"sounds": [
+			{
+				"name": "btweagles:music/tucson-or-bust",
+				"stream": true
+			}
+		]
+	}
+}
