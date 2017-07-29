@@ -8,4 +8,5 @@ public class ModItems
 {
 	// ItemBlocks
 	public static final ItemBlock butter = null;
+	public static final ItemBlock meme_ore = null;
 }

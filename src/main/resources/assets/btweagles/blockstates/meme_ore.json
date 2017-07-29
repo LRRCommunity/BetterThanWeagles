@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "btweagles:meme_ore"
+	},
+	"variants": {
+		"normal": [{}],
+		"inventory": [{}]
+	}
+}

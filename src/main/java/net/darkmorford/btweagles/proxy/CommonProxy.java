@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.proxy;
 
 import net.darkmorford.btweagles.block.BlockButter;
+import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -31,6 +32,7 @@ public class CommonProxy
 	public static void registerBlocks(RegistryEvent.Register<Block> event)
 	{
 		event.getRegistry().register(new BlockButter());
+		event.getRegistry().register(new BlockMemeOre());
 	}
 
 	@SubscribeEvent
@@ -39,5 +41,7 @@ public class CommonProxy
 		// ItemBlocks
 		event.getRegistry().register(new ItemBlock(ModBlocks.butter)
 				.setRegistryName(ModBlocks.butter.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(ModBlocks.meme_ore)
+				.setRegistryName(ModBlocks.meme_ore.getRegistryName()));
 	}
 }

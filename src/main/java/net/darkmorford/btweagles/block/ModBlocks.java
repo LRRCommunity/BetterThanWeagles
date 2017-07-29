@@ -8,10 +8,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks
 {
 	public static final BlockButter butter = null;
+	public static final BlockMemeOre meme_ore = null;
 
 	@SideOnly(Side.CLIENT)
 	public static void initModels()
 	{
 		butter.initModel();
+		meme_ore.initModel();
 	}
 }
