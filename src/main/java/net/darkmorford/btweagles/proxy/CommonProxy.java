@@ -4,6 +4,8 @@ import net.darkmorford.btweagles.BetterThanWeagles;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
+import net.darkmorford.btweagles.item.ItemMusicDisc;
+import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -46,6 +48,9 @@ public class CommonProxy
 				.setRegistryName(ModBlocks.butter.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(ModBlocks.meme_ore)
 				.setRegistryName(ModBlocks.meme_ore.getRegistryName()));
+
+		// Records
+		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
 	}
 
 	@SubscribeEvent

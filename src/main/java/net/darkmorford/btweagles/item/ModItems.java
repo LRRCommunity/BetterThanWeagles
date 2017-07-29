@@ -9,4 +9,7 @@ public class ModItems
 	// ItemBlocks
 	public static final ItemBlock butter = null;
 	public static final ItemBlock meme_ore = null;
+
+	// Records
+	public static final ItemMusicDisc rap_music = null;
 }
