@@ -56,10 +56,7 @@ public class CommonProxy
 	@SubscribeEvent
 	public static void registerSounds(RegistryEvent.Register<SoundEvent> event)
 	{
-		ResourceLocation soundId = new ResourceLocation(BetterThanWeagles.MODID, "rap_music");
-		event.getRegistry().register(new SoundEvent(soundId).setRegistryName(soundId));
 
-		soundId = new ResourceLocation(BetterThanWeagles.MODID, "bus_music");
-		event.getRegistry().register(new SoundEvent(soundId).setRegistryName(soundId));
+		event.getRegistry().register(ModSounds.rap_music);
 	}
 }
