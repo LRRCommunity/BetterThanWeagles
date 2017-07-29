@@ -1,11 +1,14 @@
 package net.darkmorford.btweagles.proxy;
 
+import net.darkmorford.btweagles.BetterThanWeagles;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -43,5 +46,15 @@ public class CommonProxy
 				.setRegistryName(ModBlocks.butter.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(ModBlocks.meme_ore)
 				.setRegistryName(ModBlocks.meme_ore.getRegistryName()));
+	}
+
+	@SubscribeEvent
+	public static void registerSounds(RegistryEvent.Register<SoundEvent> event)
+	{
+		ResourceLocation soundId = new ResourceLocation(BetterThanWeagles.MODID, "rap_music");
+		event.getRegistry().register(new SoundEvent(soundId).setRegistryName(soundId));
+
+		soundId = new ResourceLocation(BetterThanWeagles.MODID, "bus_music");
+		event.getRegistry().register(new SoundEvent(soundId).setRegistryName(soundId));
 	}
 }
