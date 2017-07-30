@@ -2,6 +2,7 @@ package net.darkmorford.btweagles.block;
 
 import net.darkmorford.btweagles.BetterThanWeagles;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,6 +22,7 @@ public class BlockButter extends Block
 		setRegistryName(BetterThanWeagles.MODID, "butter");
 		setUnlocalizedName("butter");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
+		setSoundType(SoundType.SLIME);
 	}
 
 	@SideOnly(Side.CLIENT)
