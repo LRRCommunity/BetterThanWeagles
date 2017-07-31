@@ -4,6 +4,7 @@ import net.darkmorford.btweagles.BetterThanWeagles;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
+import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.sound.ModSounds;
@@ -64,6 +65,8 @@ public class CommonProxy
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName(BetterThanWeagles.MODID, "dilly_bar")
 				.setUnlocalizedName("dilly_bar"));
+
+		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
 
 		// Armor
 		event.getRegistry().register(new ItemArmor(ModItems.wool_armor, 1, EntityEquipmentSlot.HEAD)

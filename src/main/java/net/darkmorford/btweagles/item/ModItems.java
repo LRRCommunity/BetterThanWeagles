@@ -33,6 +33,7 @@ public class ModItems
 
 	// Food
 	public static final ItemFood dilly_bar = null;
+	public static final ItemJellyBean jelly_bean = null;
 
 	// Armor
 	public static final ItemArmor wool_helmet = null;
@@ -44,6 +45,7 @@ public class ModItems
 	public static void initModels()
 	{
 		rap_music.initModel();
+		jelly_bean.initModel();
 
 		ModelLoader.setCustomModelResourceLocation(dilly_bar, 0, new ModelResourceLocation(dilly_bar.getRegistryName(), "inventory"));
 	}
