@@ -7,9 +7,11 @@ import net.darkmorford.btweagles.block.ModBlocks;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.block.Block;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.ItemFood;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -51,12 +53,19 @@ public class CommonProxy
 
 		// Records
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
+
+		// Food
+		event.getRegistry().register(new ItemFood(20, 5.0F, false)
+				.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, 100, 0), 0.5F)
+				.setAlwaysEdible()
+				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
+				.setRegistryName(BetterThanWeagles.MODID, "dilly_bar")
+				.setUnlocalizedName("dilly_bar"));
 	}
 
 	@SubscribeEvent
 	public static void registerSounds(RegistryEvent.Register<SoundEvent> event)
 	{
-
 		event.getRegistry().register(ModSounds.rap_music);
 	}
 }

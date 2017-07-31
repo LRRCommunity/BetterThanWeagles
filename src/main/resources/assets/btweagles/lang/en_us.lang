@@ -5,5 +5,7 @@ tile.meme_ore.name=Meme Ore
 # Creative Tabs
 itemGroup.btweagles=Better Than Weagles
 
+# Items
+item.dilly_bar.name=Dilly Bar
 item.record.rap_music.name=Rap CD
 item.record.rap_music.desc=Twenty-Thirteen
