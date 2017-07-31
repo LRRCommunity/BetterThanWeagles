@@ -1,4 +1,10 @@
 {
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "jei"
+		}
+	],
 	"result": {
 		"item": "btweagles:butter",
 	  	"count": 4
