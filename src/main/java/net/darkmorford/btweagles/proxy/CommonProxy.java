@@ -5,6 +5,7 @@ import net.darkmorford.btweagles.Config;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
+import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.sound.ModSounds;
@@ -19,6 +20,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -38,6 +40,8 @@ public class CommonProxy
 		File configDir = event.getModConfigurationDirectory();
 		config = new Configuration(new File(configDir.getPath(), "btweagles.cfg"));
 		Config.readConfig();
+		
+		registerFluids();
 	}
 
 	public void init(FMLInitializationEvent event)
@@ -58,6 +62,12 @@ public class CommonProxy
 	{
 		event.getRegistry().register(new BlockButter());
 		event.getRegistry().register(new BlockMemeOre());
+	}
+
+	public static void registerFluids()
+	{
+		FluidRegistry.registerFluid(ModFluids.liquid_butter);
+		FluidRegistry.addBucketForFluid(ModFluids.liquid_butter);
 	}
 
 	@SubscribeEvent
