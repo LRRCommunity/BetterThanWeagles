@@ -3,7 +3,10 @@ package net.darkmorford.btweagles;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -31,6 +34,16 @@ public class BetterThanWeagles
 	public static CommonProxy proxy;
 
 	public static Logger logger;
+
+	// Materials
+	public static final ItemArmor.ArmorMaterial wool_armor = EnumHelper.addArmorMaterial(
+			"WOOL",
+			"btweagles:wool",
+			3,
+			new int[] {1, 1, 1, 1},
+			6,
+			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
+			0.0F);
 
 	public static final CreativeTabs tabBTWeagles = new CreativeTabs("btweagles")
 	{

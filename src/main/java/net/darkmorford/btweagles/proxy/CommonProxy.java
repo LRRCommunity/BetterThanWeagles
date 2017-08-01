@@ -6,7 +6,6 @@ import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
 import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
-import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.init.MobEffects;
@@ -69,22 +68,22 @@ public class CommonProxy
 		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
 
 		// Armor
-		event.getRegistry().register(new ItemArmor(ModItems.wool_armor, 1, EntityEquipmentSlot.HEAD)
+		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 1, EntityEquipmentSlot.HEAD)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("wool_helmet")
 				.setUnlocalizedName("wool_helmet"));
 
-		event.getRegistry().register(new ItemArmor(ModItems.wool_armor, 1, EntityEquipmentSlot.CHEST)
+		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 1, EntityEquipmentSlot.CHEST)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("wool_chestplate")
 				.setUnlocalizedName("wool_chestplate"));
 
-		event.getRegistry().register(new ItemArmor(ModItems.wool_armor, 2, EntityEquipmentSlot.LEGS)
+		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 2, EntityEquipmentSlot.LEGS)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("wool_leggings")
 				.setUnlocalizedName("wool_leggings"));
 
-		event.getRegistry().register(new ItemArmor(ModItems.wool_armor, 1, EntityEquipmentSlot.FEET)
+		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 1, EntityEquipmentSlot.FEET)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("wool_boots")
 				.setUnlocalizedName("wool_boots"));
