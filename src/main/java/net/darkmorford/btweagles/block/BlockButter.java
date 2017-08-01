@@ -15,7 +15,7 @@ public class BlockButter extends Block
 {
 	public BlockButter()
 	{
-		super(Material.CLAY);
+		super(Material.ROCK);
 
 		this.slipperiness = 0.98F;
 
@@ -23,6 +23,8 @@ public class BlockButter extends Block
 		setUnlocalizedName("butter");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
 		setSoundType(SoundType.SLIME);
+		setHarvestLevel("shovel", 2);
+		setHardness(2.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
