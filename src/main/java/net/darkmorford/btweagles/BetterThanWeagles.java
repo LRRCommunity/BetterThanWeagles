@@ -7,6 +7,7 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -64,6 +65,9 @@ public class BetterThanWeagles
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		MinecraftForge.EVENT_BUS.register(new LootTableInjector());
+		MinecraftForge.EVENT_BUS.register(new EvenMoreMobHeads());
+
 		proxy.init(event);
 	}
 
