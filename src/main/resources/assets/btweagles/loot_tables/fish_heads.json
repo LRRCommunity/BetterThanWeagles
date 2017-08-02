@@ -7,7 +7,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:skull",
-                    "entryName": "btweagels:fish_head",
+                    "entryName": "btweagles:fish_head",
                     "weight": 40,
                     "functions": [
                         {
@@ -23,7 +23,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:skull",
-                    "entryName": "btweagels:salmon_head",
+                    "entryName": "btweagles:salmon_head",
                     "weight": 30,
                     "functions": [
                         {
@@ -39,7 +39,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:skull",
-                    "entryName": "btweagels:clownfish_head",
+                    "entryName": "btweagles:clownfish_head",
                     "weight": 10,
                     "functions": [
                         {
@@ -55,7 +55,7 @@
                 {
                     "type": "item",
                     "name": "minecraft:skull",
-                    "entryName": "btweagels:pufferfish_head",
+                    "entryName": "btweagles:pufferfish_head",
                     "weight": 20,
                     "functions": [
                         {
