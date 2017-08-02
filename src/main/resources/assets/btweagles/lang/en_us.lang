@@ -7,5 +7,12 @@ itemGroup.btweagles=Better Than Weagles
 
 # Items
 item.dilly_bar.name=Dilly Bar
+item.jelly_bean.name=Jelly Bean
+
+item.wool_helmet.name=Wool Cap
+item.wool_chestplate.name=Wool Shirt
+item.wool_leggings.name=Wool Pants
+item.wool_boots.name=Wool Boots
+
 item.record.rap_music.name=Rap CD
 item.record.rap_music.desc=Twenty-Thirteen
