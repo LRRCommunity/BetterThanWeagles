@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.item;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
@@ -15,6 +16,9 @@ public class ModItems
 	// ItemBlocks
 	public static final ItemBlock butter = null;
 	public static final ItemBlock meme_ore = null;
+
+	// Miscellaneous
+	public static final Item shiny_stone = null;
 
 	// Records
 	public static final ItemMusicDisc rap_music = null;
@@ -34,6 +38,8 @@ public class ModItems
 	{
 		rap_music.initModel();
 		jelly_bean.initModel();
+
+		ModelLoader.setCustomModelResourceLocation(shiny_stone, 0, new ModelResourceLocation(shiny_stone.getRegistryName(), "inventory"));
 
 		ModelLoader.setCustomModelResourceLocation(dilly_bar, 0, new ModelResourceLocation(dilly_bar.getRegistryName(), "inventory"));
 

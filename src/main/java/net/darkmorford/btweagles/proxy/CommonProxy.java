@@ -54,6 +54,9 @@ public class CommonProxy
 		event.getRegistry().register(new ItemBlock(ModBlocks.meme_ore)
 				.setRegistryName(ModBlocks.meme_ore.getRegistryName()));
 
+		// Miscellaneous
+		event.getRegistry().register(new Item().setUnlocalizedName("shiny_stone").setRegistryName("shiny_stone"));
+
 		// Records
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
 
