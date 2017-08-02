@@ -36,5 +36,10 @@ public class ModItems
 		jelly_bean.initModel();
 
 		ModelLoader.setCustomModelResourceLocation(dilly_bar, 0, new ModelResourceLocation(dilly_bar.getRegistryName(), "inventory"));
+
+		ModelLoader.setCustomModelResourceLocation(wool_helmet, 0, new ModelResourceLocation(wool_helmet.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(wool_chestplate, 0, new ModelResourceLocation(wool_chestplate.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(wool_leggings, 0, new ModelResourceLocation(wool_leggings.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(wool_boots, 0, new ModelResourceLocation(wool_boots.getRegistryName(), "inventory"));
 	}
 }
