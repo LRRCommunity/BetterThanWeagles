@@ -1,0 +1,16 @@
+{
+	"result": {
+		"item": "btweagles:wool_leggings"
+	},
+	"pattern": [
+		"www",
+		"w w",
+		"w w"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"w": {
+			"item": "minecraft:wool"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"result": {
+		"item": "btweagles:wool_helmet"
+	},
+	"pattern": [
+		"www",
+		"w w"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"w": {
+			"item": "minecraft:wool"
+		}
+	}
+}

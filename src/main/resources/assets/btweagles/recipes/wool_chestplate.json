@@ -1,0 +1,16 @@
+{
+	"result": {
+		"item": "btweagles:wool_chestplate"
+	},
+	"pattern": [
+		"w w",
+		"www",
+		"www"
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"w": {
+			"item": "minecraft:wool"
+		}
+	}
+}
