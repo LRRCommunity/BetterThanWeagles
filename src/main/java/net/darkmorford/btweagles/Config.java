@@ -11,6 +11,8 @@ public class Config
 	private static final String catJellyBeans = "jellybeans";
 
 	// Configuration values
+	public static int shiny_stone_drop_rate = 2;
+
 	public static int jellybean_duration_generic = 100;
 
 	public static void readConfig()
@@ -38,6 +40,8 @@ public class Config
 	private static void initGeneralConfig(Configuration cfg)
 	{
 		cfg.addCustomCategoryComment(catGeneral, "General configuration");
+
+		shiny_stone_drop_rate = cfg.getInt("shiny_stone_rate", catGeneral, shiny_stone_drop_rate, 0, 100, "Drop rate of shiny stone (percentage)");
 	}
 
 	private static void initJellyBeanConfig(Configuration cfg)
