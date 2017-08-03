@@ -18,6 +18,10 @@ public class BlockMemeOre extends Block
 		setRegistryName(BetterThanWeagles.MODID, "meme_ore");
 		setUnlocalizedName("meme_ore");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
+
+		setHardness(1.5F);
+		setResistance(1000.0F);
+		setHarvestLevel("pickaxe", 2);
 	}
 
 	@SideOnly(Side.CLIENT)
