@@ -7,6 +7,8 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.Random;
+
 @Mod.EventBusSubscriber
 public class EventHandlerBlockDrops
 {
@@ -15,7 +17,12 @@ public class EventHandlerBlockDrops
 	{
 		if (event.getState().getBlock() == Blocks.GRAVEL)
 		{
-			event.getDrops().add(new ItemStack(ModItems.shiny_stone));
+			Random rand = event.getWorld().rand;
+
+			if (rand.nextInt(100) < 2)
+			{
+				event.getDrops().add(new ItemStack(ModItems.shiny_stone));
+			}
 		}
 	}
 }
