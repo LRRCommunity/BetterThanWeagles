@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "name": "inject0",
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "empty",
+                    "weight": 499
+                },
+                {
+                    "type": "loot_table",
+                    "name": "btweagles:fish_heads",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}
