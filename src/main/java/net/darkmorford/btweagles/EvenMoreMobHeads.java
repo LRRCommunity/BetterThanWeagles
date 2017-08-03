@@ -53,7 +53,7 @@ public class EvenMoreMobHeads
 
 	protected static Map<String, ItemStack> buildHeads()
 	{
-		ImmutableMap.Builder heads = ImmutableMap.builder();
+		ImmutableMap.Builder<String, ItemStack> heads = ImmutableMap.builder();
 
 		heads.put("minecraft:zombie_villager;minecraft:farmer", skull("Zombie Farmer Head", "1c067ee0-f090-4f79-89f1-51b87eafa257", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmMDQ4MmZkMzJmYWIyY2U5ZjVmYTJlMmQ5YjRkYzc1NjFkYTQyMjE1MmM5OWZjODA0YjkxMzljYWYyNTZiIn19fQ=="));
 		heads.put("minecraft:zombie_villager;minecraft:librarian", skull("Zombie Librarian Head", "17ecf859-a648-4b01-8d9c-c1403e68f680", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDRmMDhlYmQ0ZTI1Y2RhM2FkZTQ1Yjg2MzM3OGFkMzc3ZjE4YzUxMGRiNGQyOGU4MmJiMjQ0NTE0MzliMzczNCJ9fX0="));
