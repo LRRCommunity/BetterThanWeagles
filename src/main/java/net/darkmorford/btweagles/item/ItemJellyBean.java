@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.item;
 
 import net.darkmorford.btweagles.BetterThanWeagles;
+import net.darkmorford.btweagles.Config;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -29,33 +30,33 @@ public class ItemJellyBean extends ItemFood
 		setUnlocalizedName("jelly_bean");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
 
-		beanEffects.add(Pair.of(MobEffects.SPEED, 100));
-		beanEffects.add(Pair.of(MobEffects.SLOWNESS, 100));
-		beanEffects.add(Pair.of(MobEffects.HASTE, 100));
-		beanEffects.add(Pair.of(MobEffects.MINING_FATIGUE, 100));
-		beanEffects.add(Pair.of(MobEffects.STRENGTH, 100));
-		beanEffects.add(Pair.of(MobEffects.INSTANT_HEALTH, 100));
-		beanEffects.add(Pair.of(MobEffects.INSTANT_DAMAGE, 100));
-		beanEffects.add(Pair.of(MobEffects.JUMP_BOOST, 100));
-		beanEffects.add(Pair.of(MobEffects.NAUSEA, 100));
-		beanEffects.add(Pair.of(MobEffects.REGENERATION, 100));
-		beanEffects.add(Pair.of(MobEffects.RESISTANCE, 100));
-		beanEffects.add(Pair.of(MobEffects.FIRE_RESISTANCE, 100));
-		beanEffects.add(Pair.of(MobEffects.WATER_BREATHING, 100));
-		beanEffects.add(Pair.of(MobEffects.INVISIBILITY, 100));
-		beanEffects.add(Pair.of(MobEffects.BLINDNESS, 100));
-		beanEffects.add(Pair.of(MobEffects.NIGHT_VISION, 100));
-		beanEffects.add(Pair.of(MobEffects.HUNGER, 100));
-		beanEffects.add(Pair.of(MobEffects.WEAKNESS, 100));
-		beanEffects.add(Pair.of(MobEffects.POISON, 100));
-		beanEffects.add(Pair.of(MobEffects.WITHER, 100));
-		beanEffects.add(Pair.of(MobEffects.HEALTH_BOOST, 100));
-		beanEffects.add(Pair.of(MobEffects.ABSORPTION, 100));
-		beanEffects.add(Pair.of(MobEffects.SATURATION, 100));
-		beanEffects.add(Pair.of(MobEffects.GLOWING, 100));
-		beanEffects.add(Pair.of(MobEffects.LEVITATION, 100));
-		beanEffects.add(Pair.of(MobEffects.LUCK, 100));
-		beanEffects.add(Pair.of(MobEffects.UNLUCK, 100));
+		beanEffects.add(Pair.of(MobEffects.SPEED, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.SLOWNESS, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.HASTE, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.MINING_FATIGUE, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.STRENGTH, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.INSTANT_HEALTH, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.INSTANT_DAMAGE, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.JUMP_BOOST, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.NAUSEA, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.REGENERATION, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.RESISTANCE, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.FIRE_RESISTANCE, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.WATER_BREATHING, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.INVISIBILITY, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.BLINDNESS, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.NIGHT_VISION, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.HUNGER, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.WEAKNESS, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.POISON, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.WITHER, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.HEALTH_BOOST, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.ABSORPTION, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.SATURATION, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.GLOWING, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.LEVITATION, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.LUCK, Config.jellybean_duration_generic));
+		beanEffects.add(Pair.of(MobEffects.UNLUCK, Config.jellybean_duration_generic));
 	}
 
 	@SideOnly(Side.CLIENT)

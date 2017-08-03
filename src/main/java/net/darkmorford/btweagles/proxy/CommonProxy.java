@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.proxy;
 
 import net.darkmorford.btweagles.BetterThanWeagles;
+import net.darkmorford.btweagles.Config;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
@@ -16,6 +17,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,11 +25,19 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.io.File;
+
 @Mod.EventBusSubscriber
 public class CommonProxy
 {
+	public static Configuration config;
+
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		// Load configuration from file
+		File configDir = event.getModConfigurationDirectory();
+		config = new Configuration(new File(configDir.getPath(), "btweagles.cfg"));
+		Config.readConfig();
 	}
 
 	public void init(FMLInitializationEvent event)
@@ -36,6 +46,11 @@ public class CommonProxy
 
 	public void postInit(FMLPostInitializationEvent event)
 	{
+		// Save configuration file
+		if (config.hasChanged())
+		{
+			config.save();
+		}
 	}
 
 	@SubscribeEvent
