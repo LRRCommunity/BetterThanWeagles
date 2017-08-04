@@ -7,5 +7,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModSounds
 {
+	// Music
 	public static SoundEvent rap_music = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "rap_music")).setRegistryName(BetterThanWeagles.MODID, "rap_music");
+
+	// SFX
+	public static SoundEvent beejdrop = new SoundEvent(new ResourceLocation("beejdrop")).setRegistryName("beejdrop");
 }

@@ -110,6 +110,10 @@ public class CommonProxy
 	@SubscribeEvent
 	public static void registerSounds(RegistryEvent.Register<SoundEvent> event)
 	{
+		// Music
 		event.getRegistry().register(ModSounds.rap_music);
+
+		// SFX
+		event.getRegistry().register(ModSounds.beejdrop);
 	}
 }

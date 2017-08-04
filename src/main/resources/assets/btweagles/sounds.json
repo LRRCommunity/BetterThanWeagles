@@ -16,5 +16,11 @@
 				"stream": true
 			}
 		]
+	},
+	"beejdrop": {
+		"category": "master",
+		"sounds": [
+			"btweagles:beejdrop"
+		]
 	}
 }
