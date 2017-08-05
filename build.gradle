@@ -43,11 +43,16 @@ repositories {
         name "jei"
         url "http://dvs1.progwml6.com/files/maven"
     }
-	
-	maven {
-		name "chickenbones"
-		url "http://chickenbones.net/maven"
-	}
+
+    maven {
+        name "chickenbones"
+        url "http://chickenbones.net/maven"
+    }
+
+    maven {
+        name "darkmorford"
+        url "http://ocean.darkmorford.net:8080/repository/internal"
+    }
 }
 
 dependencies {
