@@ -11,5 +11,5 @@ public class ModSounds
 	public static SoundEvent rap_music = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "rap_music")).setRegistryName(BetterThanWeagles.MODID, "rap_music");
 
 	// SFX
-	public static SoundEvent beejdrop = new SoundEvent(new ResourceLocation("beejdrop")).setRegistryName("beejdrop");
+	public static SoundEvent beejdrop = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "beejdrop")).setRegistryName("beejdrop");
 }
