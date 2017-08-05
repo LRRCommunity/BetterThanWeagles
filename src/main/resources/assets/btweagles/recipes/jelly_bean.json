@@ -1,0 +1,17 @@
+{
+	"result": {
+		"item": "btweagles:jelly_bean"
+	},
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:rotten_flesh"
+		},
+		{
+			"item": "minecraft:apple"
+		}
+	]
+}
