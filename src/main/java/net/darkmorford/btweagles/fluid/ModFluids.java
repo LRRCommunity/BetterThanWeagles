@@ -27,6 +27,8 @@ public class ModFluids
 		Fluid fluid = new Fluid(fluidName, stillTexture, flowTexture);
 		FluidRegistry.registerFluid(fluid);
 
+		fluid.setDensity(800).setViscosity(1500);
+
 		return fluid;
 	}
 
