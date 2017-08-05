@@ -16,6 +16,7 @@ public class ModItems
 	// ItemBlocks
 	public static final ItemBlock butter = null;
 	public static final ItemBlock meme_ore = null;
+	public static final ItemBlock liquid_butter = null;
 
 	// Miscellaneous
 	public static final Item shiny_stone = null;

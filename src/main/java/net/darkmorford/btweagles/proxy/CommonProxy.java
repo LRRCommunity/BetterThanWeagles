@@ -10,6 +10,8 @@ import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -20,6 +22,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -40,7 +43,7 @@ public class CommonProxy
 		File configDir = event.getModConfigurationDirectory();
 		config = new Configuration(new File(configDir.getPath(), "btweagles.cfg"));
 		Config.readConfig();
-		
+
 		registerFluids();
 	}
 
@@ -62,11 +65,12 @@ public class CommonProxy
 	{
 		event.getRegistry().register(new BlockButter());
 		event.getRegistry().register(new BlockMemeOre());
+
+		event.getRegistry().register(new BlockFluidClassic(ModFluids.liquid_butter, new MaterialLiquid(MapColor.YELLOW)).setRegistryName("liquid_butter").setUnlocalizedName("liquid_butter").setCreativeTab(BetterThanWeagles.tabBTWeagles));
 	}
 
 	public static void registerFluids()
 	{
-		FluidRegistry.registerFluid(ModFluids.liquid_butter);
 		FluidRegistry.addBucketForFluid(ModFluids.liquid_butter);
 	}
 
@@ -78,6 +82,8 @@ public class CommonProxy
 				.setRegistryName(ModBlocks.butter.getRegistryName()));
 		event.getRegistry().register(new ItemBlock(ModBlocks.meme_ore)
 				.setRegistryName(ModBlocks.meme_ore.getRegistryName()));
+		event.getRegistry().register(new ItemBlock(ModBlocks.liquid_butter)
+				.setRegistryName(ModBlocks.liquid_butter.getRegistryName()));
 
 		// Miscellaneous
 		event.getRegistry().register(new Item().setUnlocalizedName("shiny_stone").setRegistryName("shiny_stone"));

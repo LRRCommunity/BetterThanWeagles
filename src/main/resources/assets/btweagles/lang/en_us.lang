@@ -1,9 +1,13 @@
 # Blocks
 tile.butter.name=Butter
+tile.liquid_butter.name=Melted Butter
 tile.meme_ore.name=Meme Ore
 
 # Creative Tabs
 itemGroup.btweagles=Better Than Weagles
+
+# Fluids
+fluid.liquid_butter=Melted Butter
 
 # Items
 item.dilly_bar.name=Dilly Bar
