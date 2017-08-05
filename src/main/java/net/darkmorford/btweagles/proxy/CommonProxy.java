@@ -85,7 +85,7 @@ public class CommonProxy
 				.setRegistryName(ModBlocks.liquid_butter.getRegistryName()));
 
 		// Miscellaneous
-		event.getRegistry().register(new Item().setUnlocalizedName("shiny_stone").setRegistryName("shiny_stone"));
+		event.getRegistry().register(new Item().setUnlocalizedName("shiny_stone").setRegistryName("shiny_stone").setCreativeTab(BetterThanWeagles.tabBTWeagles));
 
 		// Records
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
