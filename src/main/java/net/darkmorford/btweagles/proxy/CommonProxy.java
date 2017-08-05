@@ -85,6 +85,11 @@ public class CommonProxy
 
 		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
 
+		event.getRegistry().register(new ItemFood(10, 2.0F, false)
+				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
+				.setRegistryName("chicken_dinner")
+				.setUnlocalizedName("chicken_dinner"));
+
 		// Armor
 		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 1, EntityEquipmentSlot.HEAD)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)

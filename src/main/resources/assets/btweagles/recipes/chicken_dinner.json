@@ -1,0 +1,20 @@
+{
+	"result": {
+		"item": "btweagles:chicken_dinner"
+	},
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:cooked_chicken"
+		},
+		{
+			"item": "minecraft:baked_potato"
+		},
+		{
+			"item": "minecraft:carrot"
+		},
+		{
+			"item": "minecraft:bread"
+		}
+	]
+}
