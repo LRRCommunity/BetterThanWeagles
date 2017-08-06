@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 		name = BetterThanWeagles.MODNAME,
 		version = BetterThanWeagles.VERSION,
 		useMetadata = true,
-		dependencies = "after:thermalexpansion;after:harvestcraft;after:actuallyadditions"
+		dependencies = "after:thermalexpansion;after:harvestcraft;after:actuallyadditions;after:tconstruct"
 )
 public class BetterThanWeagles
 {
