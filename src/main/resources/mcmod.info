@@ -10,5 +10,6 @@
     "credits": "",
     "logoFile": "assets/btweagles/textures/btweagles.png",
     "screenshots": [],
-    "dependencies": []
+    "dependencies": ["thermalexpansion", "harvestcraft"],
+    "useDependencyInformation": true
 }]

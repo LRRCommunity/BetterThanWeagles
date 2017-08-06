@@ -21,7 +21,8 @@ import org.apache.logging.log4j.Logger;
 		modid = BetterThanWeagles.MODID,
 		name = BetterThanWeagles.MODNAME,
 		version = BetterThanWeagles.VERSION,
-		useMetadata = true
+		useMetadata = true,
+		dependencies = "after:thermalexpansion;after:harvestcraft"
 )
 public class BetterThanWeagles
 {
