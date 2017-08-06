@@ -52,7 +52,7 @@ public class BetterThanWeagles
 		@Override
 		public ItemStack getTabIconItem()
 		{
-			return new ItemStack(ModItems.butter);
+			return new ItemStack(ModItems.dilly_bar);
 		}
 	};
 
