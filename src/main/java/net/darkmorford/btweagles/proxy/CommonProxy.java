@@ -10,7 +10,6 @@ import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -66,7 +65,7 @@ public class CommonProxy
 		event.getRegistry().register(new BlockButter());
 		event.getRegistry().register(new BlockMemeOre());
 
-		event.getRegistry().register(new BlockFluidClassic(ModFluids.liquid_butter, new MaterialLiquid(MapColor.YELLOW)).setRegistryName("liquid_butter").setUnlocalizedName("liquid_butter").setCreativeTab(BetterThanWeagles.tabBTWeagles));
+		event.getRegistry().register(new BlockFluidClassic(ModFluids.liquid_butter, MaterialLiquid.WATER).setRegistryName("liquid_butter").setUnlocalizedName("liquid_butter").setCreativeTab(BetterThanWeagles.tabBTWeagles));
 	}
 
 	public static void registerFluids()
