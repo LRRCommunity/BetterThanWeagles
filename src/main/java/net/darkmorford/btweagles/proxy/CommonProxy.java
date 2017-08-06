@@ -100,12 +100,12 @@ public class CommonProxy
 
 		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
 
-		event.getRegistry().register(new ItemFood(10, 2.0F, false)
+		event.getRegistry().register(new ItemFood(Config.chickendinner_hunger, 2.0F, false)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("chicken_dinner")
 				.setUnlocalizedName("chicken_dinner"));
 
-		event.getRegistry().register(new ItemFood(10, 2.0F, false)
+		event.getRegistry().register(new ItemFood(Config.meatshroom_hunger, 2.0F, false)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("meatshroom")
 				.setUnlocalizedName("meatshroom"));

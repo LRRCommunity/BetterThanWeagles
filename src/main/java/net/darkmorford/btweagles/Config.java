@@ -8,12 +8,16 @@ public class Config
 {
 	// Configuration categories
 	private static final String catGeneral = "general";
+	private static final String catFood = "food";
 	private static final String catJellyBeans = "jellybeans";
 
 	// Configuration values
 	public static int shiny_stone_drop_rate = 2;
 
 	public static int jellybean_duration_generic = 100;
+
+	public static int meatshroom_hunger = 5;
+	public static int chickendinner_hunger = 10;
 
 	public static void readConfig()
 	{
@@ -22,6 +26,7 @@ public class Config
 		{
 			cfg.load();
 			initGeneralConfig(cfg);
+			initFoodConfig(cfg);
 			initJellyBeanConfig(cfg);
 		}
 		catch (Exception e)
@@ -42,6 +47,14 @@ public class Config
 		cfg.addCustomCategoryComment(catGeneral, "General configuration");
 
 		shiny_stone_drop_rate = cfg.getInt("shiny_stone_rate", catGeneral, shiny_stone_drop_rate, 0, 100, "Drop rate of shiny stone (percentage)");
+	}
+
+	private static void initFoodConfig(Configuration cfg)
+	{
+		cfg.addCustomCategoryComment(catFood, "Food configuration");
+
+		chickendinner_hunger = cfg.getInt("chicken_dinner_hunger", catFood, chickendinner_hunger, 0, 20, "Chicken Dinner hunger value");
+		meatshroom_hunger = cfg.getInt("meatshroom_hunger", catFood, meatshroom_hunger, 0, 20, "Meatshroom hunger value");
 	}
 
 	private static void initJellyBeanConfig(Configuration cfg)
