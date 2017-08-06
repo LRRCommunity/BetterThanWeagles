@@ -90,6 +90,11 @@ public class CommonProxy
 				.setRegistryName("chicken_dinner")
 				.setUnlocalizedName("chicken_dinner"));
 
+		event.getRegistry().register(new ItemFood(10, 2.0F, false)
+				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
+				.setRegistryName("meatshroom")
+				.setUnlocalizedName("meatshroom"));
+
 		// Armor
 		event.getRegistry().register(new ItemArmor(BetterThanWeagles.wool_armor, 1, EntityEquipmentSlot.HEAD)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)

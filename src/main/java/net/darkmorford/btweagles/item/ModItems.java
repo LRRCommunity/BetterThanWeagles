@@ -26,6 +26,7 @@ public class ModItems
 	// Food
 	public static final ItemFood dilly_bar = null;
 	public static final ItemFood chicken_dinner = null;
+	public static final ItemFood meatshroom = null;
 	public static final ItemJellyBean jelly_bean = null;
 
 	// Armor
@@ -44,6 +45,7 @@ public class ModItems
 
 		ModelLoader.setCustomModelResourceLocation(dilly_bar, 0, new ModelResourceLocation(dilly_bar.getRegistryName(), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(chicken_dinner, 0, new ModelResourceLocation(chicken_dinner.getRegistryName(), "inventory"));
+		ModelLoader.setCustomModelResourceLocation(meatshroom, 0, new ModelResourceLocation(meatshroom.getRegistryName(), "inventory"));
 
 		ModelLoader.setCustomModelResourceLocation(wool_helmet, 0, new ModelResourceLocation(wool_helmet.getRegistryName(), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(wool_chestplate, 0, new ModelResourceLocation(wool_chestplate.getRegistryName(), "inventory"));
