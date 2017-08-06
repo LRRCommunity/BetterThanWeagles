@@ -31,6 +31,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import slimeknights.mantle.util.RecipeMatch;
+import slimeknights.tconstruct.library.TinkerRegistry;
+import slimeknights.tconstruct.library.smeltery.CastingRecipe;
+import slimeknights.tconstruct.library.smeltery.MeltingRecipe;
+import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 
 import java.io.File;
 
@@ -54,6 +59,18 @@ public class CommonProxy
 		if (Loader.isModLoaded("actuallyadditions"))
 		{
 			ActuallyAdditionsAPI.addOilGenRecipe("liquid_butter", 40, 80);
+		}
+
+		if (Loader.isModLoaded("tconstruct"))
+		{
+			TinkerRegistry.registerMelting(new MeltingRecipe(RecipeMatch.of(ModBlocks.butter, 1000), ModFluids.liquid_butter, 300));
+			TinkerRegistry.registerBasinCasting(new CastingRecipe(new ItemStack(ModBlocks.butter), ModFluids.liquid_butter, 1000, 60));
+
+			if (Loader.isModLoaded("harvestcraft"))
+			{
+				TinkerRegistry.registerMelting(new MeltingRecipe(RecipeMatch.of(ItemRegistry.butterItem, 250), ModFluids.liquid_butter, 200));
+				TinkerRegistry.registerTableCasting(new CastingRecipe(new ItemStack(ItemRegistry.butterItem), RecipeMatch.of(TinkerSmeltery.castIngot), ModFluids.liquid_butter, 250, 15));
+			}
 		}
 
 		if (Loader.isModLoaded("thermalexpansion"))
