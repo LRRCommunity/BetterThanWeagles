@@ -50,6 +50,11 @@ repositories {
     }
 
     maven {
+        name "actuallyadditions"
+        url "https://maven.chaosfield.at"
+    }
+
+    maven {
         name "darkmorford"
         url "http://ocean.darkmorford.net:8080/repository/internal"
     }
@@ -77,6 +82,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+    provided "de.ellpeck.actuallyadditions:ActuallyAdditions:1.12-r113:api"
     provided "cofh:ThermalExpansion:1.12-5.3.3.15:deobf"
     provided "harvestcraft:Pam's HarvestCraft:1.12c"
 }
