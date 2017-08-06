@@ -1,0 +1,40 @@
+{
+	"result": {
+		"item": "btweagles:meatshroom"
+	},
+	"pattern": [
+		"pcs",
+		" b ",
+		" b "
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"b": {
+			"item": "minecraft:bone"
+		},
+		"p": [
+			{
+				"item": "minecraft:porkchop"
+			},
+			{
+				"item": "minecraft:cooked_porkchop"
+			}
+		],
+		"c": [
+			{
+				"item": "minecraft:chicken"
+			},
+			{
+				"item": "minecraft:cooked_chicken"
+			}
+		],
+		"s": [
+			{
+				"item": "minecraft:beef"
+			},
+			{
+				"item": "minecraft:cooked_beef"
+			}
+		]
+	}
+}
