@@ -1,0 +1,29 @@
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "harvestcraft"
+		}
+	],
+	"result": {
+		"item": "btweagles:dilly_bar"
+	},
+	"pattern": [
+		" c ",
+		"cic",
+		" s "
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"s": {
+			"item": "minecraft:stick"
+		},
+		"i": {
+			"item": "harvestcraft:icecreamitem"
+		},
+		"c": {
+			"item": "minecraft:dye",
+			"data": 3
+		}
+	}
+}

@@ -2,12 +2,11 @@
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
-			"modid": "jei"
+			"modid": "harvestcraft"
 		}
 	],
 	"result": {
-		"item": "btweagles:butter",
-	  	"count": 4
+		"item": "btweagles:butter"
 	},
 	"pattern": [
 		"mm",
@@ -16,7 +15,7 @@
 	"type": "minecraft:crafting_shaped",
 	"key": {
 		"m": {
-			"item": "minecraft:milk_bucket"
+			"item": "harvestcraft:butteritem"
 		}
 	}
 }

@@ -21,7 +21,8 @@ import org.apache.logging.log4j.Logger;
 		modid = BetterThanWeagles.MODID,
 		name = BetterThanWeagles.MODNAME,
 		version = BetterThanWeagles.VERSION,
-		useMetadata = true
+		useMetadata = true,
+		dependencies = "after:thermalexpansion;after:harvestcraft;after:actuallyadditions;after:tconstruct"
 )
 public class BetterThanWeagles
 {
@@ -52,7 +53,7 @@ public class BetterThanWeagles
 		@Override
 		public ItemStack getTabIconItem()
 		{
-			return new ItemStack(ModItems.butter);
+			return new ItemStack(ModItems.dilly_bar);
 		}
 	};
 

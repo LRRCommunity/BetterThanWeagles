@@ -17,12 +17,13 @@ public class BlockButter extends Block
 	{
 		super(Material.ROCK);
 
-		this.slipperiness = 0.98F;
+		setSoundType(SoundType.SLIME);
+		setDefaultSlipperiness(0.98F);
 
 		setRegistryName(BetterThanWeagles.MODID, "butter");
 		setUnlocalizedName("butter");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
-		setSoundType(SoundType.SLIME);
+
 		setHarvestLevel("shovel", 2);
 		setHardness(2.0F);
 	}

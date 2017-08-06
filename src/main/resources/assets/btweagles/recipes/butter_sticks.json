@@ -1,0 +1,18 @@
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "harvestcraft"
+		}
+	],
+	"result": {
+		"item": "harvestcraft:butteritem",
+		"count": 4
+	},
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "btweagles:butter"
+		}
+	]
+}
