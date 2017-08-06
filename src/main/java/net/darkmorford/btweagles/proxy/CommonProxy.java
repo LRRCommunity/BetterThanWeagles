@@ -1,5 +1,6 @@
 package net.darkmorford.btweagles.proxy;
 
+import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import net.darkmorford.btweagles.BetterThanWeagles;
 import net.darkmorford.btweagles.Config;
 import net.darkmorford.btweagles.block.BlockButter;
@@ -23,6 +24,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -48,6 +50,10 @@ public class CommonProxy
 
 	public void init(FMLInitializationEvent event)
 	{
+		if (Loader.isModLoaded("actuallyadditions"))
+		{
+			ActuallyAdditionsAPI.addOilGenRecipe("liquid_butter", 40, 80);
+		}
 	}
 
 	public void postInit(FMLPostInitializationEvent event)
