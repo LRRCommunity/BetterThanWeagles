@@ -1,4 +1,10 @@
 {
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "harvestcraft"
+		}
+	],
 	"result": {
 		"item": "btweagles:chicken_dinner"
 	},
@@ -15,6 +21,9 @@
 		},
 		{
 			"item": "minecraft:bread"
+		},
+		{
+			"item": "harvestcraft:spiceleafitem"
 		}
 	]
 }
