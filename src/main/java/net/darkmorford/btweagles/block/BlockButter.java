@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.block;
 
 import net.darkmorford.btweagles.BetterThanWeagles;
+import net.darkmorford.btweagles.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -39,7 +40,7 @@ public class BlockButter extends Block
 
 		setHarvestLevel("shovel", 2);
 		setHardness(2.0F);
-		setTickRandomly(true);
+		setTickRandomly(Config.butter_emits_redstone_signal);
 	}
 
 	@Override
@@ -76,7 +77,7 @@ public class BlockButter extends Block
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		if (!worldIn.isRemote) {
 			IBlockState blockState = worldIn.getBlockState(pos);
-			if (!blockState.getValue(POWERED)) {
+			if (!blockState.getValue(POWERED) && Config.butter_emits_redstone_signal) {
 				worldIn.setBlockState(pos, blockState.withProperty(POWERED, true));
 				worldIn.scheduleUpdate(pos, this, 2);
 			}
