@@ -19,7 +19,9 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.BlockFluidClassic;
@@ -56,6 +58,10 @@ public class CommonProxy
 
 	public void init(FMLInitializationEvent event)
 	{
+		// Register custom loot tables
+		LootTableList.register(new ResourceLocation(BetterThanWeagles.MODID, "custom/simple_dungeon_chest"));
+
+		// Set up integration with other mods
 		if (Loader.isModLoaded("actuallyadditions"))
 		{
 			ActuallyAdditionsAPI.addOilGenRecipe("liquid_butter", 40, 80);

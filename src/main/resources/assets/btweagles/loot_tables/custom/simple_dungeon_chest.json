@@ -1,0 +1,19 @@
+{
+	"pools": [
+		{
+			"name": "weagles",
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "empty",
+					"weight": 60
+				},
+				{
+					"type": "item",
+					"name": "btweagles:rap_music",
+					"weight": 40
+				}
+			]
+		}
+	]
+}
