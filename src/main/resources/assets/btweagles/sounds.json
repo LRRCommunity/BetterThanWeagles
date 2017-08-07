@@ -19,5 +19,10 @@
 		"sounds": [
 			"btweagles:beejdrop"
 		]
+	},
+	"airhorn": {
+		"sounds": [
+			"btweagles:airhorn"
+		]
 	}
 }
