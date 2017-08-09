@@ -5,6 +5,10 @@
 	},
 	"variants": {
 		"normal": [{}],
-		"inventory": [{}]
+		"inventory": [{}],
+		"powered": {
+		  "true": {},
+		  "false": {}
+		}
 	}
 }

@@ -19,6 +19,8 @@ public class Config
 	public static int meatshroom_hunger = 5;
 	public static int chickendinner_hunger = 10;
 
+	public static boolean butter_emits_redstone_signal = false;
+
 	public static void readConfig()
 	{
 		Configuration cfg = CommonProxy.config;
@@ -47,6 +49,7 @@ public class Config
 		cfg.addCustomCategoryComment(catGeneral, "General configuration");
 
 		shiny_stone_drop_rate = cfg.getInt("shiny_stone_rate", catGeneral, shiny_stone_drop_rate, 0, 100, "Drop rate of shiny stone (percentage)");
+		butter_emits_redstone_signal = cfg.getBoolean("butter_emits_redstone_signal", catGeneral, butter_emits_redstone_signal, "Whether butter randomly emits a redstone signal");
 	}
 
 	private static void initFoodConfig(Configuration cfg)
