@@ -13,6 +13,7 @@ import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.sound.ModSounds;
+import net.darkmorford.btweagles.villager.ModVillagers;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.init.MobEffects;
@@ -33,6 +34,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry;
 import slimeknights.mantle.util.RecipeMatch;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.smeltery.CastingRecipe;
@@ -181,5 +183,11 @@ public class CommonProxy
 		// SFX
 		event.getRegistry().register(ModSounds.airhorn);
 		event.getRegistry().register(ModSounds.beejdrop);
+	}
+
+	@SubscribeEvent
+	public static void registerVillagers(RegistryEvent.Register<VillagerRegistry.VillagerProfession> event)
+	{
+		event.getRegistry().register(ModVillagers.professionKrog);
 	}
 }
