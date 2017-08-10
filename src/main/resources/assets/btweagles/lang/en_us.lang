@@ -6,6 +6,9 @@ tile.meme_ore.name=Meme Ore
 # Creative Tabs
 itemGroup.btweagles=Better Than Weagles
 
+# Entities
+entity.Villager.careerKrog=Krog
+
 # Fluids
 fluid.liquid_butter=Melted Butter
 

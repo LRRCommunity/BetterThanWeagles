@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 public class ModVillagers
 {
-	public static final VillagerRegistry.VillagerProfession professionKrog = new VillagerRegistry.VillagerProfession("professionKrog",
+	public static final VillagerRegistry.VillagerProfession professionKrog = new VillagerRegistry.VillagerProfession("btweagles:professionKrog",
 			"btweagles:textures/entity/villager/krog.png",
 			"minecraft:textures/entity/villager/zombie_villager.png");
 
