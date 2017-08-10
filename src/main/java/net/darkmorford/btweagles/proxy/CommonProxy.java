@@ -189,5 +189,6 @@ public class CommonProxy
 	public static void registerVillagers(RegistryEvent.Register<VillagerRegistry.VillagerProfession> event)
 	{
 		event.getRegistry().register(ModVillagers.professionKrog);
+		event.getRegistry().register(ModVillagers.professionTorg);
 	}
 }
