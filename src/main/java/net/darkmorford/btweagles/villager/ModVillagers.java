@@ -5,6 +5,7 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 public class ModVillagers
@@ -24,4 +25,14 @@ public class ModVillagers
 	protected static final VillagerRegistry.VillagerCareer careerTorg = new VillagerRegistry.VillagerCareer(professionTorg, "careerTorg")
 			.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.BEEF), new EntityVillager.PriceInfo(1, 2),
 					new ItemStack(Blocks.SAPLING, 1, 3), new EntityVillager.PriceInfo(1, 2)));
+
+	public static void registerVillagerTrades()
+	{
+		NBTTagCompound parrotTag = new NBTTagCompound();
+		parrotTag.setString("id", "minecraft:parrot");
+		ItemStack parrotEgg = new ItemStack(Items.SPAWN_EGG, 1, 0, parrotTag);
+
+		careerTorg.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.PORKCHOP), new EntityVillager.PriceInfo(2, 4),
+				parrotEgg, new EntityVillager.PriceInfo(1, 1)));
+	}
 }

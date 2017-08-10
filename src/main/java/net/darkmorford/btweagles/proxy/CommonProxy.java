@@ -56,6 +56,8 @@ public class CommonProxy
 		Config.readConfig();
 
 		registerFluids();
+
+		ModVillagers.registerVillagerTrades();
 	}
 
 	public void init(FMLInitializationEvent event)
