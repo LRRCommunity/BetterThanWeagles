@@ -2,6 +2,7 @@
 tile.butter.name=Butter
 tile.liquid_butter.name=Melted Butter
 tile.meme_ore.name=Meme Ore
+tile.meme_ore.tooltip=We don't know what this does yet
 
 # Creative Tabs
 itemGroup.btweagles=Better Than Weagles
