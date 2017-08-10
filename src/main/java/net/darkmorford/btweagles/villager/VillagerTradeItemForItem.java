@@ -30,8 +30,8 @@ public class VillagerTradeItemForItem implements EntityVillager.ITradeList
 		int sellingPrice = this.sellingPriceInfo.getPrice(random);
 
 		MerchantRecipe tradeRecipe = new MerchantRecipe(
-				new ItemStack(buyingItemStack.getItem(), buyingPrice, buyingItemStack.getMetadata()),
-				new ItemStack(sellingItemStack.getItem(), sellingPrice, sellingItemStack.getMetadata()));
+				new ItemStack(buyingItemStack.getItem(), buyingPrice, buyingItemStack.getMetadata(), buyingItemStack.getTagCompound()),
+				new ItemStack(sellingItemStack.getItem(), sellingPrice, sellingItemStack.getMetadata(), sellingItemStack.getTagCompound()));
 		recipeList.add(tradeRecipe);
 	}
 }
