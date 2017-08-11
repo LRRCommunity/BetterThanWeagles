@@ -56,14 +56,14 @@ public class CommonProxy
 		Config.readConfig();
 
 		registerFluids();
-
-		ModVillagers.registerVillagerTrades();
 	}
 
 	public void init(FMLInitializationEvent event)
 	{
 		// Register custom loot tables
 		LootTableList.register(new ResourceLocation(BetterThanWeagles.MODID, "custom/simple_dungeon_chest"));
+
+		ModVillagers.registerVillagerTrades();
 
 		// Set up integration with other mods
 		if (Loader.isModLoaded("actuallyadditions"))

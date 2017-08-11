@@ -14,25 +14,28 @@ public class ModVillagers
 			"btweagles:textures/entity/villager/krog.png",
 			"minecraft:textures/entity/villager/zombie_villager.png");
 
-	protected static final VillagerRegistry.VillagerCareer careerKrog = new VillagerRegistry.VillagerCareer(professionKrog, "careerKrog")
-			.addTrade(1, new VillagerTradeItemForItem(new ItemStack(ModItems.shiny_stone), new EntityVillager.PriceInfo(1, 1),
-					new ItemStack(Items.LEATHER), new EntityVillager.PriceInfo(2, 2)));
+	protected static final VillagerRegistry.VillagerCareer careerKrog = new VillagerRegistry.VillagerCareer(professionKrog, "careerKrog");
 
 	public static final VillagerRegistry.VillagerProfession professionTorg = new VillagerRegistry.VillagerProfession("btweagles:profession_torg",
 			"btweagles:textures/entity/villager/torg.png",
 			"minecraft:textures/entity/villager/zombie_villager.png");
 
-	protected static final VillagerRegistry.VillagerCareer careerTorg = new VillagerRegistry.VillagerCareer(professionTorg, "careerTorg")
-			.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.BEEF), new EntityVillager.PriceInfo(1, 2),
-					new ItemStack(Blocks.SAPLING, 1, 3), new EntityVillager.PriceInfo(1, 2)));
+	protected static final VillagerRegistry.VillagerCareer careerTorg = new VillagerRegistry.VillagerCareer(professionTorg, "careerTorg");
 
 	public static void registerVillagerTrades()
 	{
+		careerKrog.addTrade(1, new VillagerTradeItemForItem(new ItemStack(ModItems.shiny_stone), new EntityVillager.PriceInfo(1, 1),
+				new ItemStack(Items.LEATHER), new EntityVillager.PriceInfo(2, 2)));
+
+		careerTorg.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.BEEF), new EntityVillager.PriceInfo(1, 3),
+				new ItemStack(Blocks.SAPLING, 1, 3), new EntityVillager.PriceInfo(1, 3)));
+
 		NBTTagCompound parrotTag = new NBTTagCompound();
 		parrotTag.setString("id", "minecraft:parrot");
-		ItemStack parrotEgg = new ItemStack(Items.SPAWN_EGG, 1, 0, parrotTag);
+		ItemStack parrotEgg = new ItemStack(Items.SPAWN_EGG, 1);
+		parrotEgg.setTagInfo("EntityTag", parrotTag);
 
-		careerTorg.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.PORKCHOP), new EntityVillager.PriceInfo(2, 4),
+		careerTorg.addTrade(2, new VillagerTradeItemForItem(new ItemStack(Items.PORKCHOP), new EntityVillager.PriceInfo(2, 4),
 				parrotEgg, new EntityVillager.PriceInfo(1, 1)));
 	}
 }
