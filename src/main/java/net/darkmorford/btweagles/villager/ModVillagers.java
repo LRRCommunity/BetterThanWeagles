@@ -31,6 +31,9 @@ public class ModVillagers
 		careerKrog.addTrade(1, new VillagerTradeItemForItem(new ItemStack(ModItems.shiny_stone), new EntityVillager.PriceInfo(1, 1),
 				new ItemStack(Items.LEATHER), new EntityVillager.PriceInfo(2, 2)));
 
+		careerKrog.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.PAINTING), new EntityVillager.PriceInfo(1, 1),
+				new ItemStack(Blocks.CACTUS), new EntityVillager.PriceInfo(8, 16)));
+
 		careerTorg.addTrade(1, new VillagerTradeItemForItem(new ItemStack(Items.BEEF), new EntityVillager.PriceInfo(1, 3),
 				new ItemStack(Blocks.SAPLING, 1, 3), new EntityVillager.PriceInfo(1, 3)));
 
