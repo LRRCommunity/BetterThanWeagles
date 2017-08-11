@@ -1,11 +1,13 @@
 package net.darkmorford.btweagles.villager;
 
+import com.pam.harvestcraft.item.ItemRegistry;
 import net.darkmorford.btweagles.item.ModItems;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 public class ModVillagers
@@ -35,7 +37,10 @@ public class ModVillagers
 		ItemStack parrotEgg = new ItemStack(Items.SPAWN_EGG, 1);
 		parrotEgg.setTagInfo("EntityTag", parrotTag);
 
-		careerTorg.addTrade(2, new VillagerTradeItemForItem(new ItemStack(Items.PORKCHOP), new EntityVillager.PriceInfo(2, 4),
-				parrotEgg, new EntityVillager.PriceInfo(1, 1)));
+		if (Loader.isModLoaded("harvestcraft"))
+		{
+			careerTorg.addTrade(2, new VillagerTradeItemForItem(new ItemStack(ItemRegistry.honeycombItem), new EntityVillager.PriceInfo(30, 40),
+					parrotEgg, new EntityVillager.PriceInfo(1, 1)));
+		}
 	}
 }
