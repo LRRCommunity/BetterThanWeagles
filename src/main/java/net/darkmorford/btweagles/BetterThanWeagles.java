@@ -21,6 +21,7 @@ import org.apache.logging.log4j.Logger;
 		modid = BetterThanWeagles.MODID,
 		name = BetterThanWeagles.MODNAME,
 		version = BetterThanWeagles.VERSION,
+		acceptedMinecraftVersions = "[1.12,1.13)",
 		useMetadata = true,
 		dependencies = "after:thermalexpansion;after:harvestcraft;after:actuallyadditions;after:tconstruct"
 )
