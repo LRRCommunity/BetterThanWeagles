@@ -14,6 +14,7 @@ import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.darkmorford.btweagles.villager.ModVillagers;
+import net.darkmorford.btweagles.villager.VillagerStructures;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.init.MobEffects;
@@ -22,6 +23,7 @@ import net.minecraft.item.*;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -190,6 +192,9 @@ public class CommonProxy
 	@SubscribeEvent
 	public static void registerVillagers(RegistryEvent.Register<VillagerRegistry.VillagerProfession> event)
 	{
+		VillagerRegistry.instance().registerVillageCreationHandler(new VillagerStructures.CaveHandler());
+		MapGenStructureIO.registerStructureComponent(VillagerStructures.Cave.class, "btweagles:caveStructure");
+
 		event.getRegistry().register(ModVillagers.professionKrog);
 		event.getRegistry().register(ModVillagers.professionTorg);
 	}
