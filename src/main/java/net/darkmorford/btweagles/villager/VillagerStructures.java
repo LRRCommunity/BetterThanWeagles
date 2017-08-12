@@ -1,5 +1,6 @@
 package net.darkmorford.btweagles.villager;
 
+import net.minecraft.block.BlockDirt;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -38,6 +39,9 @@ public class VillagerStructures
 
 	public static class Cave extends StructureVillagePieces.Village
 	{
+		private int[] floorX = { 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7 };
+		private int[] floorZ = { 1, 2, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 1, 2 };
+
 		private int[] layer0X = { 0, 0, 1, 1, 1, 1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 7, 7, 8, 8 };
 		private int[] layer0Z = { 1, 2, 0, 3, 4, 5, 6, 7, 8, 9, 8, 6, 7, 0, 3, 4, 5, 1, 2 };
 
@@ -62,7 +66,7 @@ public class VillagerStructures
 
 		public static Cave createPiece(StructureVillagePieces.Start start, List<StructureComponent> components, Random rand, int x, int y, int z, EnumFacing facing, int type)
 		{
-			StructureBoundingBox box = StructureBoundingBox.getComponentToAddBoundingBox(x, y, z, 0, 0, 0, 9, 6, 10, facing);
+			StructureBoundingBox box = StructureBoundingBox.getComponentToAddBoundingBox(x, y, z, 0, 0, 0, 9, 7, 10, facing);
 			return canVillageGoDeeper(box) && StructureComponent.findIntersecting(components, box) == null ? new Cave(start, type, rand, box, facing) : null;
 		}
 
@@ -82,47 +86,53 @@ public class VillagerStructures
 			}
 
 			IBlockState stone = this.getBiomeSpecificBlockState(Blocks.COBBLESTONE.getDefaultState());
+			IBlockState dirt = Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.COARSE_DIRT);
+
+			for (int i = 0; i < floorX.length; ++i)
+			{
+				this.setBlockState(worldIn, dirt, floorX[i], 0, floorZ[i], structureBoundingBoxIn);
+			}
 
 			for (int i = 0; i < layer0X.length; ++i)
 			{
-				this.setBlockState(worldIn, stone, layer0X[i], 0, layer0Z[i], structureBoundingBoxIn);
 				this.setBlockState(worldIn, stone, layer0X[i], 1, layer0Z[i], structureBoundingBoxIn);
+				this.setBlockState(worldIn, stone, layer0X[i], 2, layer0Z[i], structureBoundingBoxIn);
 			}
 
 			for (int i = 0; i < layer2X.length; ++i)
 			{
-				this.setBlockState(worldIn, stone, layer2X[i], 2, layer2Z[i], structureBoundingBoxIn);
+				this.setBlockState(worldIn, stone, layer2X[i], 3, layer2Z[i], structureBoundingBoxIn);
 			}
 
 			for (int i = 0; i < layer3X.length; ++i)
 			{
-				this.setBlockState(worldIn, stone, layer3X[i], 3, layer3Z[i], structureBoundingBoxIn);
+				this.setBlockState(worldIn, stone, layer3X[i], 4, layer3Z[i], structureBoundingBoxIn);
 			}
 
 			for (int i = 0; i < layer4X.length; ++i)
 			{
-				this.setBlockState(worldIn, stone, layer4X[i], 4, layer4Z[i], structureBoundingBoxIn);
+				this.setBlockState(worldIn, stone, layer4X[i], 5, layer4Z[i], structureBoundingBoxIn);
 			}
 
 			for (int i = 0; i < layer5X.length; ++i)
 			{
-				this.setBlockState(worldIn, stone, layer5X[i], 5, layer5Z[i], structureBoundingBoxIn);
+				this.setBlockState(worldIn, stone, layer5X[i], 6, layer5Z[i], structureBoundingBoxIn);
 			}
 
-			this.placeTorch(worldIn, EnumFacing.SOUTH, 4, 2, 7, structureBoundingBoxIn);
-			this.placeTorch(worldIn, EnumFacing.EAST, 2, 3, 2, structureBoundingBoxIn);
-			this.placeTorch(worldIn, EnumFacing.WEST, 6, 3, 2, structureBoundingBoxIn);
+			this.placeTorch(worldIn, EnumFacing.SOUTH, 4, 3, 7, structureBoundingBoxIn);
+			this.placeTorch(worldIn, EnumFacing.EAST, 2, 4, 2, structureBoundingBoxIn);
+			this.placeTorch(worldIn, EnumFacing.WEST, 6, 4, 2, structureBoundingBoxIn);
 
 			for (int x = 0; x < 9; ++x)
 			{
 				for (int z = 0; z < 10; ++z)
 				{
-					this.clearCurrentPositionBlocksUpwards(worldIn, x, 6, z, structureBoundingBoxIn);
+					this.clearCurrentPositionBlocksUpwards(worldIn, x, 7, z, structureBoundingBoxIn);
 					this.replaceAirAndLiquidDownwards(worldIn, stone, x, -1, z, structureBoundingBoxIn);
 				}
 			}
 
-			this.spawnVillagers(worldIn, structureBoundingBoxIn, 4, 1, 3, 2);
+			this.spawnVillagers(worldIn, structureBoundingBoxIn, 4, 2, 3, 2);
 
 			return true;
 		}
