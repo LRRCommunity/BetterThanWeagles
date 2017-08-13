@@ -8,7 +8,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureVillagePieces;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 import java.util.List;
@@ -56,6 +55,10 @@ public class VillagerStructures
 
 		private int[] layer5X = { 4, 4, 4, 4 };
 		private int[] layer5Z = { 2, 3, 4, 5 };
+
+		public Cave()
+		{
+		}
 
 		public Cave(StructureVillagePieces.Start start, int type, Random rand, StructureBoundingBox box, EnumFacing facing)
 		{
