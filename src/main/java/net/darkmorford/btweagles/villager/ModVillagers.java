@@ -1,6 +1,5 @@
 package net.darkmorford.btweagles.villager;
 
-import cofh.thermalfoundation.init.TFFluids;
 import com.pam.harvestcraft.item.ItemRegistry;
 import net.darkmorford.btweagles.item.ModItems;
 import net.minecraft.block.Block;
@@ -10,11 +9,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.ForgeModContainer;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
-import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
@@ -62,14 +58,14 @@ public class ModVillagers
 			}
 		}
 
-		if (Loader.isModLoaded("thermalexpansion"))
+		if (Loader.isModLoaded("actuallyadditions"))
 		{
 			Item crystal = Item.REGISTRY.getObject(new ResourceLocation("actuallyadditions", "item_crystal"));
 			if (crystal != null)
 			{
-				ItemStack steamBucket = FluidUtil.getFilledBucket(new FluidStack(TFFluids.fluidSteam, 1000));
+				ItemStack starterKit = createChickenSpawnerKit();
 				careerKrog.addTrade(3, new VillagerTradeItemForItem(new ItemStack(crystal, 1, 4), new EntityVillager.PriceInfo(1, 1),
-						steamBucket, new EntityVillager.PriceInfo(1, 1)));
+						starterKit, new EntityVillager.PriceInfo(1, 1)));
 			}
 		}
 
@@ -96,5 +92,44 @@ public class ModVillagers
 			careerTorg.addTrade(3, new VillagerTradeItemForItem(new ItemStack(ItemRegistry.honeycombItem), new EntityVillager.PriceInfo(30, 40),
 					parrotEgg, new EntityVillager.PriceInfo(1, 1)));
 		}
+	}
+
+	private static ItemStack createChickenSpawnerKit()
+	{
+		// Build the item tag for the Spawner Changer
+		NBTTagCompound spawnerChanger = new NBTTagCompound();
+		spawnerChanger.setString("id", "actuallyadditions:item_spawner_changer");
+		spawnerChanger.setByte("Count", (byte)1);
+		spawnerChanger.setShort("Damage", (short)0);
+		spawnerChanger.setByte("Slot", (byte)0);
+		spawnerChanger.getCompoundTag("tag").setString("Entity", "minecraft:chicken");
+
+		// Build the item tag for the Mob Spawner
+		NBTTagCompound mobSpawner = new NBTTagCompound();
+		mobSpawner.setString("id", "minecraft:mob_spawner");
+		mobSpawner.setByte("Count", (byte)1);
+		mobSpawner.setShort("Damage", (short)0);
+		mobSpawner.setByte("Slot", (byte)1);
+
+		// Put the chest items in a list
+		NBTTagList inventory = new NBTTagList();
+		inventory.appendTag(spawnerChanger);
+		inventory.appendTag(mobSpawner);
+
+		// Build the BlockEntityTag
+		NBTTagCompound blockEntityTag = new NBTTagCompound();
+		blockEntityTag.setString("CustomName", "Chicken Spawner Kit");
+		blockEntityTag.setTag("Items", inventory);
+
+		// Build the display tag
+		NBTTagCompound displayTag = new NBTTagCompound();
+		displayTag.setString("Name", "Chicken Spawner Kit");
+
+		// Create the ItemStack and attach the tags
+		ItemStack chest = new ItemStack(Blocks.CHEST);
+		chest.setTagInfo("BlockEntityTag", blockEntityTag);
+		chest.setTagInfo("display", displayTag);
+
+		return chest;
 	}
 }
