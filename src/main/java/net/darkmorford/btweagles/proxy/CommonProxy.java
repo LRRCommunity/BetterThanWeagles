@@ -12,6 +12,8 @@ import net.darkmorford.btweagles.integration.IntegrationTinkers;
 import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.sound.ModSounds;
+import net.darkmorford.btweagles.villager.ModVillagers;
+import net.darkmorford.btweagles.villager.VillagerStructures;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.init.MobEffects;
@@ -23,6 +25,7 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
@@ -34,6 +37,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 import java.io.File;
 
@@ -61,6 +65,8 @@ public class CommonProxy
 	{
 		// Register custom loot tables
 		LootTableList.register(new ResourceLocation(BetterThanWeagles.MODID, "custom/simple_dungeon_chest"));
+
+		ModVillagers.registerVillagerTrades();
 
 		// Set up integration with other mods
 		if (Loader.isModLoaded("actuallyadditions"))
@@ -170,5 +176,15 @@ public class CommonProxy
 		// SFX
 		event.getRegistry().register(ModSounds.airhorn);
 		event.getRegistry().register(ModSounds.beejdrop);
+	}
+
+	@SubscribeEvent
+	public static void registerVillagers(RegistryEvent.Register<VillagerRegistry.VillagerProfession> event)
+	{
+		VillagerRegistry.instance().registerVillageCreationHandler(new VillagerStructures.CaveHandler());
+		MapGenStructureIO.registerStructureComponent(VillagerStructures.Cave.class, "btweagles:caveStructure");
+
+		event.getRegistry().register(ModVillagers.professionKrog);
+		event.getRegistry().register(ModVillagers.professionTorg);
 	}
 }
