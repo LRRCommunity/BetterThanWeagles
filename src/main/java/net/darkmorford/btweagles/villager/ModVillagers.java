@@ -64,7 +64,7 @@ public class ModVillagers
 			if (crystal != null)
 			{
 				ItemStack starterKit = createChickenSpawnerKit();
-				careerKrog.addTrade(3, new VillagerTradeItemForItem(new ItemStack(crystal, 1, 4), new EntityVillager.PriceInfo(1, 1),
+				careerKrog.addTrade(3, new VillagerTradeItemForItem(new ItemStack(crystal, 1, 4), new EntityVillager.PriceInfo(1, 3),
 						starterKit, new EntityVillager.PriceInfo(1, 1)));
 			}
 		}
@@ -78,8 +78,8 @@ public class ModVillagers
 		Block net = Block.REGISTRY.getObject(new ResourceLocation("actuallyadditions", "block_fishing_net"));
 		if (net != Blocks.AIR)
 		{
-			careerTorg.addTrade(2, new VillagerTradeItemForItem(new ItemStack(net), new EntityVillager.PriceInfo(3, 6),
-					new ItemStack(Items.DYE, 1, 3), new EntityVillager.PriceInfo(3, 6)));
+			careerTorg.addTrade(2, new VillagerTradeItemForItem(new ItemStack(net), new EntityVillager.PriceInfo(1, 1),
+					new ItemStack(Items.DYE, 1, 3), new EntityVillager.PriceInfo(24, 36)));
 		}
 
 		if (Loader.isModLoaded("harvestcraft"))
