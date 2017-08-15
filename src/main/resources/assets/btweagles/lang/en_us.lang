@@ -20,6 +20,7 @@ item.jelly_bean.name=Jelly Bean
 item.meatshroom.name=Meatshroom
 item.chicken_dinner.name=Chicken Dinner
 item.simic_slaw.name=Simic Slaw
+item.simic_slaw.desc=Lots of things!
 
 item.shiny_stone.name=Stone with Shiny Speckles
 
