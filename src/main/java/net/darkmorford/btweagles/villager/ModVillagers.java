@@ -102,7 +102,10 @@ public class ModVillagers
 		spawnerChanger.setByte("Count", (byte)1);
 		spawnerChanger.setShort("Damage", (short)0);
 		spawnerChanger.setByte("Slot", (byte)0);
-		spawnerChanger.getCompoundTag("tag").setString("Entity", "minecraft:chicken");
+
+		NBTTagCompound spawnerTag = new NBTTagCompound();
+		spawnerTag.setString("Entity", "minecraft:chicken");
+		spawnerChanger.setTag("tag", spawnerTag);
 
 		// Build the item tag for the Mob Spawner
 		NBTTagCompound mobSpawner = new NBTTagCompound();
