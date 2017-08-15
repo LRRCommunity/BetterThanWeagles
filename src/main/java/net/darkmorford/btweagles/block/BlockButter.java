@@ -49,6 +49,7 @@ public class BlockButter extends Block
 	}
 
 	@Override
+	@Deprecated
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(POWERED, (meta & 1) != 0);
 	}
@@ -59,16 +60,19 @@ public class BlockButter extends Block
 	}
 
 	@Override
+	@Deprecated
 	public boolean canProvidePower(IBlockState state) {
 		return true;
 	}
 
 	@Override
+	@Deprecated
 	public int getStrongPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
 		return 0;
 	}
 
 	@Override
+	@Deprecated
 	public int getWeakPower(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
 		return blockState.getValue(POWERED) ? 15 : 0;
 	}
