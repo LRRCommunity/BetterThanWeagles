@@ -29,7 +29,7 @@ public class BetterThanWeagles
 {
 	public static final String MODID = "btweagles";
 	public static final String MODNAME = "BetterThanWeagles";
-	public static final String VERSION = "1.12-0.0.6.0";
+	public static final String VERSION = "1.12-0.0.7.0";
 
 	@Mod.Instance
 	public static BetterThanWeagles instance;
