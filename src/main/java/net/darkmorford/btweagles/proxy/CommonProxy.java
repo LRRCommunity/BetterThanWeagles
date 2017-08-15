@@ -11,6 +11,7 @@ import net.darkmorford.btweagles.integration.IntegrationThermal;
 import net.darkmorford.btweagles.integration.IntegrationTinkers;
 import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
+import net.darkmorford.btweagles.item.ItemSimicSlaw;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.darkmorford.btweagles.villager.ModVillagers;
 import net.darkmorford.btweagles.villager.VillagerStructures;
@@ -134,6 +135,8 @@ public class CommonProxy
 				.setUnlocalizedName("dilly_bar"));
 
 		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
+
+		event.getRegistry().register(new ItemSimicSlaw(2, 0.1F));
 
 		event.getRegistry().register(new ItemFood(Config.chickendinner_hunger, 2.0F, false)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)

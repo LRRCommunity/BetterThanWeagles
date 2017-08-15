@@ -29,6 +29,7 @@ public class ModItems
 	public static final ItemFood chicken_dinner = null;
 	public static final ItemFood meatshroom = null;
 	public static final ItemJellyBean jelly_bean = null;
+	public static final ItemSimicSlaw simic_slaw = null;
 
 	// Armor
 	public static final ItemArmor wool_helmet = null;
@@ -41,6 +42,7 @@ public class ModItems
 	{
 		rap_music.initModel();
 		jelly_bean.initModel();
+		simic_slaw.initModel();
 
 		ModelLoader.setCustomModelResourceLocation(shiny_stone, 0, new ModelResourceLocation(shiny_stone.getRegistryName(), "inventory"));
 

@@ -1,0 +1,34 @@
+{
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "harvestcraft"
+		}
+	],
+	"result": {
+		"item": "btweagles:simic_slaw",
+		"nbt": {
+			"hunger": "2b",
+			"saturation": "0.1f"
+		}
+	},
+	"pattern": [
+		"cls",
+		" b "
+	],
+	"type": "minecraft:crafting_shaped",
+	"key": {
+		"b": {
+			"item": "minecraft:bowl"
+		},
+		"l": {
+			"item": "harvestcraft:cabbageitem"
+		},
+		"s": {
+			"item": "harvestcraft:calamarirawitem"
+		},
+		"c": {
+			"item": "minecraft:carrot"
+		}
+	}
+}
