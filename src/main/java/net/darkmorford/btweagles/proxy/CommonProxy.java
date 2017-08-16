@@ -126,8 +126,8 @@ public class CommonProxy
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
 
 		// Food
-		event.getRegistry().register(new ItemFood(20, 5.0F, false)
-				.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, 100, 0), 0.5F)
+		event.getRegistry().register(new ItemFood(10, 0.8F, false)
+				.setPotionEffect(new PotionEffect(MobEffects.NAUSEA, 200, 0), 0.5F)
 				.setAlwaysEdible()
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName(BetterThanWeagles.MODID, "dilly_bar")

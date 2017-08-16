@@ -9,7 +9,6 @@
 		"item": "btweagles:dilly_bar"
 	},
 	"pattern": [
-		" c ",
 		"cic",
 		" s "
 	],
@@ -22,8 +21,7 @@
 			"item": "harvestcraft:icecreamitem"
 		},
 		"c": {
-			"item": "minecraft:dye",
-			"data": 3
+			"item": "harvestcraft:chocolatebaritem"
 		}
 	}
 }
