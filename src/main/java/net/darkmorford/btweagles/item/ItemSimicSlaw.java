@@ -4,10 +4,12 @@ import net.darkmorford.btweagles.BetterThanWeagles;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,42 +29,36 @@ public class ItemSimicSlaw extends ItemFood
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack stack)
+	protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer playerIn)
 	{
-		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("speed"))
+		if (!worldIn.isRemote && worldIn.rand.nextFloat() < 0.75F)
 		{
-			return stack.getTagCompound().getInteger("speed");
-		}
-		else
-		{
-			return super.getMaxItemUseDuration(stack);
+			int foodAdditions = getFoodAdditions(stack);
+			int durationTicks = (10 + foodAdditions) * 20;
+
+			playerIn.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, durationTicks));
+
+			if (foodAdditions >= 2)
+			{
+				playerIn.addPotionEffect(new PotionEffect(MobEffects.POISON, durationTicks));
+			}
+
+			if (foodAdditions >= 4)
+			{
+				playerIn.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, durationTicks));
+			}
+
+			if (foodAdditions >= 6)
+			{
+				playerIn.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, durationTicks));
+			}
 		}
 	}
 
 	@Override
 	public int getHealAmount(ItemStack stack)
 	{
-		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("hunger"))
-		{
-			return stack.getTagCompound().getInteger("hunger");
-		}
-		else
-		{
-			return super.getHealAmount(stack);
-		}
-	}
-
-	@Override
-	public float getSaturationModifier(ItemStack stack)
-	{
-		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("saturation"))
-		{
-			return stack.getTagCompound().getFloat("saturation");
-		}
-		else
-		{
-			return super.getSaturationModifier(stack);
-		}
+		return super.getHealAmount(stack) + getFoodAdditions(stack);
 	}
 
 	@Override
@@ -78,5 +74,17 @@ public class ItemSimicSlaw extends ItemFood
 	public void initModel()
 	{
 		ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+	}
+
+	private int getFoodAdditions(ItemStack stack)
+	{
+		int food = 0;
+
+		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("additions"))
+		{
+			food = stack.getTagCompound().getInteger("additions");
+		}
+
+		return food;
 	}
 }
