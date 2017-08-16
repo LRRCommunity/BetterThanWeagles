@@ -3,9 +3,11 @@ package net.darkmorford.btweagles.item;
 import net.darkmorford.btweagles.BetterThanWeagles;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -29,7 +31,7 @@ public class ItemSimicSlaw extends ItemFood
 	{
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("speed"))
 		{
-			return stack.getTagCompound().getByte("speed");
+			return stack.getTagCompound().getInteger("speed");
 		}
 		else
 		{
@@ -42,7 +44,7 @@ public class ItemSimicSlaw extends ItemFood
 	{
 		if (stack.hasTagCompound() && stack.getTagCompound().hasKey("hunger"))
 		{
-			return stack.getTagCompound().getByte("hunger");
+			return stack.getTagCompound().getInteger("hunger");
 		}
 		else
 		{
@@ -67,7 +69,7 @@ public class ItemSimicSlaw extends ItemFood
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
-		String translationKey = "item." + getUnlocalizedName() + ".desc";
+		String translationKey = getUnlocalizedName() + ".desc";
 		String translatedTip = I18n.format(translationKey);
 		tooltip.add(translatedTip);
 	}

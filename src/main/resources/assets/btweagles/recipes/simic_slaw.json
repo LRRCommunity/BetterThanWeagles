@@ -8,9 +8,9 @@
 	"result": {
 		"item": "btweagles:simic_slaw",
 		"nbt": {
-			"hunger": "2b",
-			"saturation": "0.1f",
-			"speed": "32b"
+			"hunger": 2,
+			"saturation": 0.1,
+			"speed": 32
 		}
 	},
 	"pattern": [
