@@ -6,12 +6,7 @@
 		}
 	],
 	"result": {
-		"item": "btweagles:simic_slaw",
-		"nbt": {
-			"hunger": 2,
-			"saturation": 0.1,
-			"speed": 32
-		}
+		"item": "btweagles:simic_slaw"
 	},
 	"pattern": [
 		"cls",
