@@ -6,6 +6,7 @@ import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
 import net.darkmorford.btweagles.crafting.RecipeSimicSlaw;
+import net.darkmorford.btweagles.entity.ModEntities;
 import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.integration.IntegrationAAdditions;
 import net.darkmorford.btweagles.integration.IntegrationThermal;
@@ -57,6 +58,8 @@ public class CommonProxy
 		Config.readConfig();
 
 		registerFluids();
+
+		ModEntities.init();
 
 		if (Loader.isModLoaded("thermalexpansion"))
 		{
