@@ -1,17 +1,16 @@
 package net.darkmorford.btweagles.entity;
 
 import net.darkmorford.btweagles.BetterThanWeagles;
+import net.darkmorford.btweagles.sound.ModSounds;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -32,6 +31,12 @@ public class EntitySteveBeej extends EntityMob
 	{
 		super.entityInit();
 		this.getDataManager().register(ARMS_RAISED, false);
+	}
+
+	@Override
+	protected SoundEvent getDeathSound()
+	{
+		return ModSounds.beejdrop;
 	}
 
 	public void setArmsRaised(boolean raised)
@@ -60,14 +65,17 @@ public class EntitySteveBeej extends EntityMob
 	protected void initEntityAI()
 	{
 		this.tasks.addTask(0, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIMoveTowardsTarget(this, 1.0, 8.0F));
 		this.tasks.addTask(7, new EntityAIWander(this, 1.0));
-		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 16.0F));
 		this.tasks.addTask(8, new EntityAILookIdle(this));
 		this.applyEntityAI();
 	}
 
 	private void applyEntityAI()
 	{
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityPlayer.class, true));
 	}
 
 	@Override
