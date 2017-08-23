@@ -5,12 +5,14 @@ import net.darkmorford.btweagles.Config;
 import net.darkmorford.btweagles.block.BlockButter;
 import net.darkmorford.btweagles.block.BlockMemeOre;
 import net.darkmorford.btweagles.block.ModBlocks;
+import net.darkmorford.btweagles.crafting.RecipeSimicSlaw;
 import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.integration.IntegrationAAdditions;
 import net.darkmorford.btweagles.integration.IntegrationThermal;
 import net.darkmorford.btweagles.integration.IntegrationTinkers;
 import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
+import net.darkmorford.btweagles.item.ItemSimicSlaw;
 import net.darkmorford.btweagles.sound.ModSounds;
 import net.darkmorford.btweagles.villager.ModVillagers;
 import net.darkmorford.btweagles.villager.VillagerStructures;
@@ -22,6 +24,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
@@ -135,6 +138,8 @@ public class CommonProxy
 
 		event.getRegistry().register(new ItemJellyBean(2, 0.1F));
 
+		event.getRegistry().register(new ItemSimicSlaw(2, 0.1F));
+
 		event.getRegistry().register(new ItemFood(Config.chickendinner_hunger, 2.0F, false)
 				.setCreativeTab(BetterThanWeagles.tabBTWeagles)
 				.setRegistryName("chicken_dinner")
@@ -186,5 +191,11 @@ public class CommonProxy
 
 		event.getRegistry().register(ModVillagers.professionKrog);
 		event.getRegistry().register(ModVillagers.professionTorg);
+	}
+
+	@SubscribeEvent
+	public static void registerRecipes(RegistryEvent.Register<IRecipe> event)
+	{
+		event.getRegistry().register(new RecipeSimicSlaw().setRegistryName("btweagles:simic_slaw_add_food"));
 	}
 }
