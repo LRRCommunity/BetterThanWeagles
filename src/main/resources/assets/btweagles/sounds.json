@@ -15,6 +15,14 @@
 			}
 		]
 	},
+	"os_music": {
+		"sounds": [
+			{
+				"name": "btweagles:music/every-os-sucks",
+				"stream": true
+			}
+		]
+	},
 	"beejdrop": {
 		"sounds": [
 			"btweagles:beejdrop"
