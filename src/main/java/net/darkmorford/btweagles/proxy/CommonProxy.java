@@ -130,6 +130,7 @@ public class CommonProxy
 
 		// Records
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
+		event.getRegistry().register(new ItemMusicDisc("bus_music", ModSounds.bus_music));
 
 		// Food
 		event.getRegistry().register(new ItemFood(10, 0.8F, false)
@@ -180,6 +181,7 @@ public class CommonProxy
 	{
 		// Music
 		event.getRegistry().register(ModSounds.rap_music);
+		event.getRegistry().register(ModSounds.bus_music);
 
 		// SFX
 		event.getRegistry().register(ModSounds.airhorn);

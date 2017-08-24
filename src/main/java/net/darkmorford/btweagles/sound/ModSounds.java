@@ -8,6 +8,7 @@ public class ModSounds
 {
 	// Music
 	public static SoundEvent rap_music = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "rap_music")).setRegistryName("rap_music");
+	public static SoundEvent bus_music = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "bus_music")).setRegistryName("bus_music");
 
 	// SFX
 	public static SoundEvent airhorn = new SoundEvent(new ResourceLocation(BetterThanWeagles.MODID, "airhorn")).setRegistryName("airhorn");

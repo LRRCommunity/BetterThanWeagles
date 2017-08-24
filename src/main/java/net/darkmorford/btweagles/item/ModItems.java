@@ -23,6 +23,7 @@ public class ModItems
 
 	// Records
 	public static final ItemMusicDisc rap_music = null;
+	public static final ItemMusicDisc bus_music = null;
 
 	// Food
 	public static final ItemFood dilly_bar = null;
@@ -41,6 +42,7 @@ public class ModItems
 	public static void initModels()
 	{
 		rap_music.initModel();
+		bus_music.initModel();
 		jelly_bean.initModel();
 		simic_slaw.initModel();
 
