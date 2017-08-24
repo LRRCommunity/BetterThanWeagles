@@ -85,6 +85,23 @@
 					"weight": 2
 				}
 			]
+		},
+		{
+			"name": "btweagles:steve_beej",
+			"conditions": [
+				{
+					"condition": "killed_by_player",
+					"inverse": true
+				}
+			],
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "btweagles:meme_ore",
+					"weight": 1
+				}
+			]
 		}
 	]
 }
