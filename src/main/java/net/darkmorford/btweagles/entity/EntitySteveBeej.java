@@ -39,6 +39,12 @@ public class EntitySteveBeej extends EntityMob
 		return ModSounds.beejdrop;
 	}
 
+	@Override
+	protected float getSoundPitch()
+	{
+		return 1.0F;
+	}
+
 	public void setArmsRaised(boolean raised)
 	{
 		this.getDataManager().set(ARMS_RAISED, raised);
