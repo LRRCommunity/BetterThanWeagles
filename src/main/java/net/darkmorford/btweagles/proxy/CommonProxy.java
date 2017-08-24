@@ -15,6 +15,7 @@ import net.darkmorford.btweagles.item.ItemJellyBean;
 import net.darkmorford.btweagles.item.ItemMusicDisc;
 import net.darkmorford.btweagles.item.ItemSimicSlaw;
 import net.darkmorford.btweagles.sound.ModSounds;
+import net.darkmorford.btweagles.util.LootIsModLoaded;
 import net.darkmorford.btweagles.villager.ModVillagers;
 import net.darkmorford.btweagles.villager.VillagerStructures;
 import net.minecraft.block.Block;
@@ -31,6 +32,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.storage.loot.LootTableList;
+import net.minecraft.world.storage.loot.conditions.LootConditionManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.BlockFluidClassic;
@@ -69,7 +71,8 @@ public class CommonProxy
 
 	public void init(FMLInitializationEvent event)
 	{
-		// Register custom loot tables
+		// Register custom loot tables and auxiliaries
+		LootConditionManager.registerCondition(new LootIsModLoaded.Serializer());
 		LootTableList.register(new ResourceLocation(BetterThanWeagles.MODID, "custom/simple_dungeon_chest"));
 
 		ModVillagers.registerVillagerTrades();
