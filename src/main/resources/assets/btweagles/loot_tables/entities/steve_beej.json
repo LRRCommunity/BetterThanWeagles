@@ -2,6 +2,11 @@
 	"pools": [
 		{
 			"name": "btweagles:steve_beej",
+			"conditions": [
+				{
+					"condition": "killed_by_player"
+				}
+			],
 			"rolls": 1,
 			"entries": [
 				{
@@ -57,17 +62,17 @@
 				{
 					"type": "item",
 					"name": "btweagles:bus_music",
-					"weight": 1
+					"weight": 2
 				},
 				{
 					"type": "item",
 					"name": "btweagles:os_music",
-					"weight": 1
+					"weight": 2
 				},
 				{
 					"type": "item",
 					"name": "btweagles:rap_music",
-					"weight": 1
+					"weight": 2
 				}
 			]
 		}
