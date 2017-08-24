@@ -71,6 +71,16 @@
 				},
 				{
 					"type": "item",
+					"name": "btweagles:butt_music",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "btweagles:db_rap_music",
+					"weight": 2
+				},
+				{
+					"type": "item",
 					"name": "btweagles:rap_music",
 					"weight": 2
 				}

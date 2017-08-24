@@ -135,6 +135,8 @@ public class CommonProxy
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
 		event.getRegistry().register(new ItemMusicDisc("bus_music", ModSounds.bus_music));
 		event.getRegistry().register(new ItemMusicDisc("os_music", ModSounds.os_music));
+		event.getRegistry().register(new ItemMusicDisc("butt_music", ModSounds.butt_music));
+		event.getRegistry().register(new ItemMusicDisc("db_rap_music", ModSounds.db_rap_music));
 
 		// Food
 		event.getRegistry().register(new ItemFood(10, 0.8F, false)
@@ -187,6 +189,8 @@ public class CommonProxy
 		event.getRegistry().register(ModSounds.rap_music);
 		event.getRegistry().register(ModSounds.bus_music);
 		event.getRegistry().register(ModSounds.os_music);
+		event.getRegistry().register(ModSounds.butt_music);
+		event.getRegistry().register(ModSounds.db_rap_music);
 
 		// SFX
 		event.getRegistry().register(ModSounds.airhorn);
