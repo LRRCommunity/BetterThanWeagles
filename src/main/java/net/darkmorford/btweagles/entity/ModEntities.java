@@ -32,7 +32,7 @@ public class ModEntities
 		validBiomes.removeAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER));
 		validBiomes.removeAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.END));
 
-		EntityRegistry.addSpawn(EntitySteveBeej.class, 10, 1, 2, EnumCreatureType.MONSTER, validBiomes.toArray(new Biome[validBiomes.size()]));
+		EntityRegistry.addSpawn(EntitySteveBeej.class, 10, 1, 1, EnumCreatureType.MONSTER, validBiomes.toArray(new Biome[validBiomes.size()]));
 
 		// Register entity loot tables
 		LootTableList.register(EntitySteveBeej.LOOT_TABLE);
