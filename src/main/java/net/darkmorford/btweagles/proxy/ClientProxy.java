@@ -1,6 +1,7 @@
 package net.darkmorford.btweagles.proxy;
 
 import net.darkmorford.btweagles.block.ModBlocks;
+import net.darkmorford.btweagles.entity.ModEntities;
 import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.item.ModItems;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -22,6 +23,7 @@ public class ClientProxy extends CommonProxy
 	public static void registerModels(ModelRegistryEvent event)
 	{
 		ModBlocks.initModels();
+		ModEntities.initModels();
 		ModFluids.initModels();
 		ModItems.initModels();
 	}

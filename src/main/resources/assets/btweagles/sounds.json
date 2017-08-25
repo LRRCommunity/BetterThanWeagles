@@ -15,6 +15,30 @@
 			}
 		]
 	},
+	"os_music": {
+		"sounds": [
+			{
+				"name": "btweagles:music/every-os-sucks",
+				"stream": true
+			}
+		]
+	},
+	"butt_music": {
+		"sounds": [
+			{
+				"name": "btweagles:music/buttstep-remix",
+				"stream": true
+			}
+		]
+	},
+	"db_rap_music": {
+		"sounds": [
+			{
+				"name": "btweagles:music/desert-bus-rap",
+				"stream": true
+			}
+		]
+	},
 	"beejdrop": {
 		"sounds": [
 			"btweagles:beejdrop"
