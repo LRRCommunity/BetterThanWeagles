@@ -23,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 		version = BetterThanWeagles.VERSION,
 		acceptedMinecraftVersions = "[1.12,1.13)",
 		useMetadata = true,
-		dependencies = "after:thermalexpansion;after:harvestcraft;after:actuallyadditions;after:tconstruct"
+		dependencies = "after:thermalexpansion;after:actuallyadditions;after:tconstruct"
 )
 public class BetterThanWeagles
 {

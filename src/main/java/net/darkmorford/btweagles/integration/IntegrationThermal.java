@@ -2,7 +2,7 @@ package net.darkmorford.btweagles.integration;
 
 import cofh.thermalexpansion.util.managers.dynamo.CompressionManager;
 import cofh.thermalexpansion.util.managers.machine.CrucibleManager;
-import com.pam.harvestcraft.item.ItemRegistry;
+import mariot7.xlfoodmod.init.ItemListxlfoodmod;
 import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.item.ModItems;
 import net.minecraft.item.ItemStack;
@@ -25,9 +25,9 @@ public class IntegrationThermal
 
 		CrucibleManager.addRecipe(10000, new ItemStack(ModItems.butter), new FluidStack(ModFluids.liquid_butter, 1000));
 
-		if (Loader.isModLoaded("harvestcraft"))
+		if (Loader.isModLoaded("xlfoodmod"))
 		{
-			CrucibleManager.addRecipe(2500, new ItemStack(ItemRegistry.butterItem), new FluidStack(ModFluids.liquid_butter, 250));
+			CrucibleManager.addRecipe(2500, new ItemStack(ItemListxlfoodmod.butter), new FluidStack(ModFluids.liquid_butter, 250));
 		}
 	}
 }

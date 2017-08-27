@@ -2,7 +2,7 @@
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
-			"modid": "harvestcraft"
+			"modid": "xlfoodmod"
 		}
 	],
 	"result": {
@@ -15,7 +15,7 @@
 	"type": "minecraft:crafting_shaped",
 	"key": {
 		"m": {
-			"item": "harvestcraft:butteritem"
+			"item": "xlfoodmod:butter"
 		}
 	}
 }
