@@ -10,6 +10,6 @@
     "credits": "",
     "logoFile": "assets/btweagles/textures/btweagles.png",
     "screenshots": [],
-    "dependencies": ["thermalexpansion", "harvestcraft", "actuallyadditions", "tconstruct"],
+    "dependencies": ["thermalexpansion", "actuallyadditions", "tconstruct", "foodexpansion", "xlfoodmod", "rustic"],
     "useDependencyInformation": true
 }]
