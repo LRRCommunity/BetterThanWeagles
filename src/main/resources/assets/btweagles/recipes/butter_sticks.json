@@ -2,11 +2,11 @@
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
-			"modid": "harvestcraft"
+			"modid": "xlfoodmod"
 		}
 	],
 	"result": {
-		"item": "harvestcraft:butteritem",
+		"item": "xlfoodmod:butter",
 		"count": 4
 	},
 	"type": "minecraft:crafting_shapeless",

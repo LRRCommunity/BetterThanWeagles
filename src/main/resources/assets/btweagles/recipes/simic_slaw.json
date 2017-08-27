@@ -2,7 +2,11 @@
 	"conditions": [
 		{
 			"type": "forge:mod_loaded",
-			"modid": "harvestcraft"
+			"modid": "foodexpansion"
+		},
+		{
+			"type": "forge:mod_loaded",
+			"modid": "xlfoodmod"
 		}
 	],
 	"result": {
@@ -18,10 +22,10 @@
 			"item": "minecraft:bowl"
 		},
 		"l": {
-			"item": "harvestcraft:cabbageitem"
+			"item": "xlfoodmod:lettuce"
 		},
 		"s": {
-			"item": "harvestcraft:calamarirawitem"
+			"item": "foodexpansion:itemsquid"
 		},
 		"c": {
 			"item": "minecraft:carrot"
