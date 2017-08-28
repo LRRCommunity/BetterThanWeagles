@@ -38,7 +38,7 @@ public class BlockButter extends Block
 		setUnlocalizedName("butter");
 		setCreativeTab(BetterThanWeagles.tabBTWeagles);
 
-		setHarvestLevel("shovel", 2);
+		setHarvestLevel("shovel", 1);
 		setHardness(2.0F);
 		setTickRandomly(Config.butter_emits_redstone_signal);
 	}
