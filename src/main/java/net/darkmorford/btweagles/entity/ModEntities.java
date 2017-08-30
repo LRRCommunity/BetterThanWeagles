@@ -28,6 +28,8 @@ public class ModEntities
 
 		validBiomes.addAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.PLAINS));
 		validBiomes.addAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.FOREST));
+		validBiomes.addAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.HILLS));
+		validBiomes.addAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.SWAMP));
 
 		validBiomes.removeAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER));
 		validBiomes.removeAll(BiomeDictionary.getBiomes(BiomeDictionary.Type.END));
