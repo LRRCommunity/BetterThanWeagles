@@ -21,7 +21,7 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12-14.21.1.2443"
+    version = "1.12.1-14.22.1.2478"
     runDir = "run"
 
     // the mappings can be changed at any time, and must be in the following format.
@@ -86,10 +86,10 @@ dependencies {
     deobfProvided "xl-food-mod:XL Food Mod:1.12-1.0.1"
 
     provided "cofh:ThermalExpansion:1.12-5.3.5.19:deobf"
-    provided "de.ellpeck.actuallyadditions:ActuallyAdditions:1.12-r117:api"
+    provided "de.ellpeck.actuallyadditions:ActuallyAdditions:1.12.1-r119:api"
     provided "rustic:rustic:0.4.1:deobf"
-    provided "slimeknights:TConstruct:1.12-2.7.2.19:deobf"
-    provided "slimeknights.mantle:Mantle:1.12-1.3.1.18:deobf"
+    provided "slimeknights:TConstruct:1.12-2.7.3.30:deobf"
+    provided "slimeknights.mantle:Mantle:1.12-1.3.1.21:deobf"
 }
 
 processResources {
