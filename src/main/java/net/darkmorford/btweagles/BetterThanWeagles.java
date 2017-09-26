@@ -1,5 +1,6 @@
 package net.darkmorford.btweagles;
 
+import net.darkmorford.btweagles.command.CommandTestLoadedChunk;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,6 +16,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 
 @Mod(
@@ -83,5 +85,11 @@ public class BetterThanWeagles
 	public void postInit(FMLPostInitializationEvent event)
 	{
 		proxy.postInit(event);
+	}
+
+	@EventHandler
+	public void serverStarting(FMLServerStartingEvent event)
+	{
+		event.registerServerCommand(new CommandTestLoadedChunk());
 	}
 }
