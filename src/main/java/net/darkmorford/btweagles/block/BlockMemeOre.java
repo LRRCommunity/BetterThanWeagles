@@ -8,6 +8,8 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -42,5 +44,11 @@ public class BlockMemeOre extends Block
 	{
 		String tipString = I18n.format("tile.meme_ore.tooltip");
 		tooltip.add(tipString);
+	}
+
+	@Override
+	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
+	{
+		return true;
 	}
 }
