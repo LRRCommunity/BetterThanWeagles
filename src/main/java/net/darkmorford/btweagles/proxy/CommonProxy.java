@@ -9,6 +9,7 @@ import net.darkmorford.btweagles.crafting.RecipeSimicSlaw;
 import net.darkmorford.btweagles.entity.ModEntities;
 import net.darkmorford.btweagles.fluid.ModFluids;
 import net.darkmorford.btweagles.integration.IntegrationAAdditions;
+import net.darkmorford.btweagles.integration.IntegrationIEngineering;
 import net.darkmorford.btweagles.integration.IntegrationThermal;
 import net.darkmorford.btweagles.integration.IntegrationTinkers;
 import net.darkmorford.btweagles.item.ItemJellyBean;
@@ -81,6 +82,11 @@ public class CommonProxy
 		if (Loader.isModLoaded("actuallyadditions"))
 		{
 			IntegrationAAdditions.init();
+		}
+
+		if (Loader.isModLoaded("immersiveengineering"))
+		{
+			IntegrationIEngineering.init();
 		}
 
 		if (Loader.isModLoaded("tconstruct"))
