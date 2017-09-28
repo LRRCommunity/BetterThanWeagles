@@ -1,5 +1,6 @@
 package net.darkmorford.btweagles;
 
+import net.darkmorford.btweagles.command.CommandDumpForcedChunks;
 import net.darkmorford.btweagles.command.CommandTestLoadedChunk;
 import net.darkmorford.btweagles.item.ModItems;
 import net.darkmorford.btweagles.proxy.CommonProxy;
@@ -91,5 +92,6 @@ public class BetterThanWeagles
 	public void serverStarting(FMLServerStartingEvent event)
 	{
 		event.registerServerCommand(new CommandTestLoadedChunk());
+		event.registerServerCommand(new CommandDumpForcedChunks());
 	}
 }
