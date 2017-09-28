@@ -20,7 +20,8 @@ public class ModFluids
 	public static final Fluid liquid_butter = createFluid(
 			"liquid_butter",
 			new ResourceLocation("btweagles", "blocks/liquid_butter_still"),
-			new ResourceLocation("btweagles", "blocks/liquid_butter_flow"));
+			new ResourceLocation("btweagles", "blocks/liquid_butter_flow"))
+			.setLuminosity(15);
 
 	private static Fluid createFluid(String fluidName, ResourceLocation stillTexture, ResourceLocation flowTexture)
 	{
