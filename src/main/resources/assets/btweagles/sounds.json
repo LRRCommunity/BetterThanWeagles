@@ -39,6 +39,14 @@
 			}
 		]
 	},
+	"matt_music": {
+		"sounds": [
+			{
+				"name": "btweagles:music/matt-wiggins",
+				"stream": true
+			}
+		]
+	},
 	"beejdrop": {
 		"sounds": [
 			"btweagles:beejdrop"

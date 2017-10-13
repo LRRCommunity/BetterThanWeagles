@@ -197,6 +197,7 @@ public class CommonProxy
 		event.getRegistry().register(ModSounds.os_music);
 		event.getRegistry().register(ModSounds.butt_music);
 		event.getRegistry().register(ModSounds.db_rap_music);
+		event.getRegistry().register(ModSounds.matt_music);
 
 		// SFX
 		event.getRegistry().register(ModSounds.airhorn);
