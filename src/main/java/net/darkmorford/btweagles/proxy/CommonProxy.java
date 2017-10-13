@@ -143,6 +143,7 @@ public class CommonProxy
 		event.getRegistry().register(new ItemMusicDisc("os_music", ModSounds.os_music));
 		event.getRegistry().register(new ItemMusicDisc("butt_music", ModSounds.butt_music));
 		event.getRegistry().register(new ItemMusicDisc("db_rap_music", ModSounds.db_rap_music));
+		event.getRegistry().register(new ItemMusicDisc("matt_music", ModSounds.matt_music));
 
 		// Food
 		event.getRegistry().register(new ItemFood(10, 0.8F, false)

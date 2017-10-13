@@ -27,6 +27,7 @@ public class ModItems
 	public static final ItemMusicDisc os_music = null;
 	public static final ItemMusicDisc butt_music = null;
 	public static final ItemMusicDisc db_rap_music = null;
+	public static final ItemMusicDisc matt_music = null;
 
 	// Food
 	public static final ItemFood dilly_bar = null;
@@ -49,6 +50,7 @@ public class ModItems
 		os_music.initModel();
 		butt_music.initModel();
 		db_rap_music.initModel();
+		matt_music.initModel();
 
 		jelly_bean.initModel();
 		simic_slaw.initModel();
