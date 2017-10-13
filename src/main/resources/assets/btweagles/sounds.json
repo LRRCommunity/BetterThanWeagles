@@ -15,14 +15,6 @@
 			}
 		]
 	},
-	"os_music": {
-		"sounds": [
-			{
-				"name": "btweagles:music/every-os-sucks",
-				"stream": true
-			}
-		]
-	},
 	"butt_music": {
 		"sounds": [
 			{

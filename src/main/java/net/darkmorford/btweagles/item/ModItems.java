@@ -24,7 +24,6 @@ public class ModItems
 	// Records
 	public static final ItemMusicDisc rap_music = null;
 	public static final ItemMusicDisc bus_music = null;
-	public static final ItemMusicDisc os_music = null;
 	public static final ItemMusicDisc butt_music = null;
 	public static final ItemMusicDisc db_rap_music = null;
 	public static final ItemMusicDisc matt_music = null;
@@ -47,7 +46,6 @@ public class ModItems
 	{
 		rap_music.initModel();
 		bus_music.initModel();
-		os_music.initModel();
 		butt_music.initModel();
 		db_rap_music.initModel();
 		matt_music.initModel();

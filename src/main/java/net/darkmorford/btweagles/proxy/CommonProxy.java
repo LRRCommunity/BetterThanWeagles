@@ -140,7 +140,6 @@ public class CommonProxy
 		// Records
 		event.getRegistry().register(new ItemMusicDisc("rap_music", ModSounds.rap_music));
 		event.getRegistry().register(new ItemMusicDisc("bus_music", ModSounds.bus_music));
-		event.getRegistry().register(new ItemMusicDisc("os_music", ModSounds.os_music));
 		event.getRegistry().register(new ItemMusicDisc("butt_music", ModSounds.butt_music));
 		event.getRegistry().register(new ItemMusicDisc("db_rap_music", ModSounds.db_rap_music));
 		event.getRegistry().register(new ItemMusicDisc("matt_music", ModSounds.matt_music));
@@ -195,7 +194,6 @@ public class CommonProxy
 		// Music
 		event.getRegistry().register(ModSounds.rap_music);
 		event.getRegistry().register(ModSounds.bus_music);
-		event.getRegistry().register(ModSounds.os_music);
 		event.getRegistry().register(ModSounds.butt_music);
 		event.getRegistry().register(ModSounds.db_rap_music);
 		event.getRegistry().register(ModSounds.matt_music);
